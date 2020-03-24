@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_outer_classname = "HeatingProto";
+option objc_class_prefix = "HEA";
+
+package heating;
+
+service Heating {
+    rpc checkStatus(Empty) returns (Status);
+
+    rpc TurnOn(TogglePower) returns (TogglePower);
+
+    rpc TurnOff(TogglePower) returns (TogglePower);
+
+    rpc AdjustTempeture(Tempeture) returns (Tempeture);
+}
+
+message Tempeture {
+    int32 degrees = 1;
+
+    enum Scales {
+        CELSIUS = 0;
+        FAHRENHEIT = 1;
+    }
+
+    Scales scale = 2
+}
+
+message Status {
+    bool on = 1;
+    Tempeture tempeture = 2;
+}
+
+message TogglePower {
+    bool on = 1;
+}
+
+message Empty {
+}
