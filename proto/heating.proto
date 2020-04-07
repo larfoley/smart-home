@@ -9,29 +9,22 @@ package heating;
 service Heating {
     rpc CheckStatus(Empty) returns (HeatingStatus);
 
+    rpc AdjustStrength(HeatingStrength) returns (HeatingStrength);
+
     rpc TurnOn(Empty) returns (HeatingStatus);
 
     rpc TurnOff(Empty) returns (HeatingStatus);
-
-    rpc AdjustTemperature(Temperature) returns (Temperature);
-}
-
-message Temperature {
-    int32 degrees = 1;
-
-    enum Scales {
-        CELSIUS = 0;
-        FAHRENHEIT = 1;
-    }
-
-    Scales scale = 2;
 }
 
 message HeatingStatus {
-    bool on = 1;
-    Temperature temperature = 2;
+    bool isOn = 1;
+    int32 strength = 2;
+    string runningTime = 3;
 }
 
 
-message Empty {
+message HeatingStrength {
+    int32 strength = 2;
 }
+
+message Empty {}

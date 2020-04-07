@@ -4,26 +4,25 @@
 package heating;
 
 /**
- * Protobuf type {@code heating.Temperature}
+ * Protobuf type {@code heating.HeatingStrength}
  */
-public  final class Temperature extends
+public  final class HeatingStrength extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:heating.Temperature)
-    TemperatureOrBuilder {
+    // @@protoc_insertion_point(message_implements:heating.HeatingStrength)
+    HeatingStrengthOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use Temperature.newBuilder() to construct.
-  private Temperature(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use HeatingStrength.newBuilder() to construct.
+  private HeatingStrength(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private Temperature() {
-    scale_ = 0;
+  private HeatingStrength() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new Temperature();
+    return new HeatingStrength();
   }
 
   @java.lang.Override
@@ -31,7 +30,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private Temperature(
+  private HeatingStrength(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -49,15 +48,9 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 8: {
-
-            degrees_ = input.readInt32();
-            break;
-          }
           case 16: {
-            int rawValue = input.readEnum();
 
-            scale_ = rawValue;
+            strength_ = input.readInt32();
             break;
           }
           default: {
@@ -81,148 +74,25 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return heating.HeatingProto.internal_static_heating_Temperature_descriptor;
+    return heating.HeatingProto.internal_static_heating_HeatingStrength_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return heating.HeatingProto.internal_static_heating_Temperature_fieldAccessorTable
+    return heating.HeatingProto.internal_static_heating_HeatingStrength_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            heating.Temperature.class, heating.Temperature.Builder.class);
+            heating.HeatingStrength.class, heating.HeatingStrength.Builder.class);
   }
 
+  public static final int STRENGTH_FIELD_NUMBER = 2;
+  private int strength_;
   /**
-   * Protobuf enum {@code heating.Temperature.Scales}
+   * <code>int32 strength = 2;</code>
+   * @return The strength.
    */
-  public enum Scales
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <code>CELSIUS = 0;</code>
-     */
-    CELSIUS(0),
-    /**
-     * <code>FAHRENHEIT = 1;</code>
-     */
-    FAHRENHEIT(1),
-    UNRECOGNIZED(-1),
-    ;
-
-    /**
-     * <code>CELSIUS = 0;</code>
-     */
-    public static final int CELSIUS_VALUE = 0;
-    /**
-     * <code>FAHRENHEIT = 1;</code>
-     */
-    public static final int FAHRENHEIT_VALUE = 1;
-
-
-    public final int getNumber() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalArgumentException(
-            "Can't get the number of an unknown enum value.");
-      }
-      return value;
-    }
-
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static Scales valueOf(int value) {
-      return forNumber(value);
-    }
-
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
-    public static Scales forNumber(int value) {
-      switch (value) {
-        case 0: return CELSIUS;
-        case 1: return FAHRENHEIT;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<Scales>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        Scales> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<Scales>() {
-            public Scales findValueByNumber(int number) {
-              return Scales.forNumber(number);
-            }
-          };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return heating.Temperature.getDescriptor().getEnumTypes().get(0);
-    }
-
-    private static final Scales[] VALUES = values();
-
-    public static Scales valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int value;
-
-    private Scales(int value) {
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:heating.Temperature.Scales)
-  }
-
-  public static final int DEGREES_FIELD_NUMBER = 1;
-  private int degrees_;
-  /**
-   * <code>int32 degrees = 1;</code>
-   * @return The degrees.
-   */
-  public int getDegrees() {
-    return degrees_;
-  }
-
-  public static final int SCALE_FIELD_NUMBER = 2;
-  private int scale_;
-  /**
-   * <code>.heating.Temperature.Scales scale = 2;</code>
-   * @return The enum numeric value on the wire for scale.
-   */
-  public int getScaleValue() {
-    return scale_;
-  }
-  /**
-   * <code>.heating.Temperature.Scales scale = 2;</code>
-   * @return The scale.
-   */
-  public heating.Temperature.Scales getScale() {
-    @SuppressWarnings("deprecation")
-    heating.Temperature.Scales result = heating.Temperature.Scales.valueOf(scale_);
-    return result == null ? heating.Temperature.Scales.UNRECOGNIZED : result;
+  public int getStrength() {
+    return strength_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -239,11 +109,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (degrees_ != 0) {
-      output.writeInt32(1, degrees_);
-    }
-    if (scale_ != heating.Temperature.Scales.CELSIUS.getNumber()) {
-      output.writeEnum(2, scale_);
+    if (strength_ != 0) {
+      output.writeInt32(2, strength_);
     }
     unknownFields.writeTo(output);
   }
@@ -254,13 +121,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (degrees_ != 0) {
+    if (strength_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(1, degrees_);
-    }
-    if (scale_ != heating.Temperature.Scales.CELSIUS.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(2, scale_);
+        .computeInt32Size(2, strength_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -272,14 +135,13 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof heating.Temperature)) {
+    if (!(obj instanceof heating.HeatingStrength)) {
       return super.equals(obj);
     }
-    heating.Temperature other = (heating.Temperature) obj;
+    heating.HeatingStrength other = (heating.HeatingStrength) obj;
 
-    if (getDegrees()
-        != other.getDegrees()) return false;
-    if (scale_ != other.scale_) return false;
+    if (getStrength()
+        != other.getStrength()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -291,78 +153,76 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + DEGREES_FIELD_NUMBER;
-    hash = (53 * hash) + getDegrees();
-    hash = (37 * hash) + SCALE_FIELD_NUMBER;
-    hash = (53 * hash) + scale_;
+    hash = (37 * hash) + STRENGTH_FIELD_NUMBER;
+    hash = (53 * hash) + getStrength();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static heating.Temperature parseFrom(
+  public static heating.HeatingStrength parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static heating.Temperature parseFrom(
+  public static heating.HeatingStrength parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static heating.Temperature parseFrom(
+  public static heating.HeatingStrength parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static heating.Temperature parseFrom(
+  public static heating.HeatingStrength parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static heating.Temperature parseFrom(byte[] data)
+  public static heating.HeatingStrength parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static heating.Temperature parseFrom(
+  public static heating.HeatingStrength parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static heating.Temperature parseFrom(java.io.InputStream input)
+  public static heating.HeatingStrength parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static heating.Temperature parseFrom(
+  public static heating.HeatingStrength parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static heating.Temperature parseDelimitedFrom(java.io.InputStream input)
+  public static heating.HeatingStrength parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static heating.Temperature parseDelimitedFrom(
+  public static heating.HeatingStrength parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static heating.Temperature parseFrom(
+  public static heating.HeatingStrength parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static heating.Temperature parseFrom(
+  public static heating.HeatingStrength parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -375,7 +235,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(heating.Temperature prototype) {
+  public static Builder newBuilder(heating.HeatingStrength prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -391,26 +251,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code heating.Temperature}
+   * Protobuf type {@code heating.HeatingStrength}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:heating.Temperature)
-      heating.TemperatureOrBuilder {
+      // @@protoc_insertion_point(builder_implements:heating.HeatingStrength)
+      heating.HeatingStrengthOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return heating.HeatingProto.internal_static_heating_Temperature_descriptor;
+      return heating.HeatingProto.internal_static_heating_HeatingStrength_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return heating.HeatingProto.internal_static_heating_Temperature_fieldAccessorTable
+      return heating.HeatingProto.internal_static_heating_HeatingStrength_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              heating.Temperature.class, heating.Temperature.Builder.class);
+              heating.HeatingStrength.class, heating.HeatingStrength.Builder.class);
     }
 
-    // Construct using heating.Temperature.newBuilder()
+    // Construct using heating.HeatingStrength.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -428,9 +288,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      degrees_ = 0;
-
-      scale_ = 0;
+      strength_ = 0;
 
       return this;
     }
@@ -438,17 +296,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return heating.HeatingProto.internal_static_heating_Temperature_descriptor;
+      return heating.HeatingProto.internal_static_heating_HeatingStrength_descriptor;
     }
 
     @java.lang.Override
-    public heating.Temperature getDefaultInstanceForType() {
-      return heating.Temperature.getDefaultInstance();
+    public heating.HeatingStrength getDefaultInstanceForType() {
+      return heating.HeatingStrength.getDefaultInstance();
     }
 
     @java.lang.Override
-    public heating.Temperature build() {
-      heating.Temperature result = buildPartial();
+    public heating.HeatingStrength build() {
+      heating.HeatingStrength result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -456,10 +314,9 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public heating.Temperature buildPartial() {
-      heating.Temperature result = new heating.Temperature(this);
-      result.degrees_ = degrees_;
-      result.scale_ = scale_;
+    public heating.HeatingStrength buildPartial() {
+      heating.HeatingStrength result = new heating.HeatingStrength(this);
+      result.strength_ = strength_;
       onBuilt();
       return result;
     }
@@ -498,21 +355,18 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof heating.Temperature) {
-        return mergeFrom((heating.Temperature)other);
+      if (other instanceof heating.HeatingStrength) {
+        return mergeFrom((heating.HeatingStrength)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(heating.Temperature other) {
-      if (other == heating.Temperature.getDefaultInstance()) return this;
-      if (other.getDegrees() != 0) {
-        setDegrees(other.getDegrees());
-      }
-      if (other.scale_ != 0) {
-        setScaleValue(other.getScaleValue());
+    public Builder mergeFrom(heating.HeatingStrength other) {
+      if (other == heating.HeatingStrength.getDefaultInstance()) return this;
+      if (other.getStrength() != 0) {
+        setStrength(other.getStrength());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -529,11 +383,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      heating.Temperature parsedMessage = null;
+      heating.HeatingStrength parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (heating.Temperature) e.getUnfinishedMessage();
+        parsedMessage = (heating.HeatingStrength) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -543,84 +397,32 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int degrees_ ;
+    private int strength_ ;
     /**
-     * <code>int32 degrees = 1;</code>
-     * @return The degrees.
+     * <code>int32 strength = 2;</code>
+     * @return The strength.
      */
-    public int getDegrees() {
-      return degrees_;
+    public int getStrength() {
+      return strength_;
     }
     /**
-     * <code>int32 degrees = 1;</code>
-     * @param value The degrees to set.
+     * <code>int32 strength = 2;</code>
+     * @param value The strength to set.
      * @return This builder for chaining.
      */
-    public Builder setDegrees(int value) {
+    public Builder setStrength(int value) {
       
-      degrees_ = value;
+      strength_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 degrees = 1;</code>
+     * <code>int32 strength = 2;</code>
      * @return This builder for chaining.
      */
-    public Builder clearDegrees() {
+    public Builder clearStrength() {
       
-      degrees_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private int scale_ = 0;
-    /**
-     * <code>.heating.Temperature.Scales scale = 2;</code>
-     * @return The enum numeric value on the wire for scale.
-     */
-    public int getScaleValue() {
-      return scale_;
-    }
-    /**
-     * <code>.heating.Temperature.Scales scale = 2;</code>
-     * @param value The enum numeric value on the wire for scale to set.
-     * @return This builder for chaining.
-     */
-    public Builder setScaleValue(int value) {
-      scale_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.heating.Temperature.Scales scale = 2;</code>
-     * @return The scale.
-     */
-    public heating.Temperature.Scales getScale() {
-      @SuppressWarnings("deprecation")
-      heating.Temperature.Scales result = heating.Temperature.Scales.valueOf(scale_);
-      return result == null ? heating.Temperature.Scales.UNRECOGNIZED : result;
-    }
-    /**
-     * <code>.heating.Temperature.Scales scale = 2;</code>
-     * @param value The scale to set.
-     * @return This builder for chaining.
-     */
-    public Builder setScale(heating.Temperature.Scales value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      
-      scale_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.heating.Temperature.Scales scale = 2;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearScale() {
-      
-      scale_ = 0;
+      strength_ = 0;
       onChanged();
       return this;
     }
@@ -637,41 +439,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:heating.Temperature)
+    // @@protoc_insertion_point(builder_scope:heating.HeatingStrength)
   }
 
-  // @@protoc_insertion_point(class_scope:heating.Temperature)
-  private static final heating.Temperature DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:heating.HeatingStrength)
+  private static final heating.HeatingStrength DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new heating.Temperature();
+    DEFAULT_INSTANCE = new heating.HeatingStrength();
   }
 
-  public static heating.Temperature getDefaultInstance() {
+  public static heating.HeatingStrength getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Temperature>
-      PARSER = new com.google.protobuf.AbstractParser<Temperature>() {
+  private static final com.google.protobuf.Parser<HeatingStrength>
+      PARSER = new com.google.protobuf.AbstractParser<HeatingStrength>() {
     @java.lang.Override
-    public Temperature parsePartialFrom(
+    public HeatingStrength parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new Temperature(input, extensionRegistry);
+      return new HeatingStrength(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<Temperature> parser() {
+  public static com.google.protobuf.Parser<HeatingStrength> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<Temperature> getParserForType() {
+  public com.google.protobuf.Parser<HeatingStrength> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public heating.Temperature getDefaultInstanceForType() {
+  public heating.HeatingStrength getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

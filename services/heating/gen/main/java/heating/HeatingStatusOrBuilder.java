@@ -8,23 +8,26 @@ public interface HeatingStatusOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>bool on = 1;</code>
-   * @return The on.
+   * <code>bool isOn = 1;</code>
+   * @return The isOn.
    */
-  boolean getOn();
+  boolean getIsOn();
 
   /**
-   * <code>.heating.Temperature temperature = 2;</code>
-   * @return Whether the temperature field is set.
+   * <code>int32 strength = 2;</code>
+   * @return The strength.
    */
-  boolean hasTemperature();
+  int getStrength();
+
   /**
-   * <code>.heating.Temperature temperature = 2;</code>
-   * @return The temperature.
+   * <code>string runningTime = 3;</code>
+   * @return The runningTime.
    */
-  heating.Temperature getTemperature();
+  java.lang.String getRunningTime();
   /**
-   * <code>.heating.Temperature temperature = 2;</code>
+   * <code>string runningTime = 3;</code>
+   * @return The bytes for runningTime.
    */
-  heating.TemperatureOrBuilder getTemperatureOrBuilder();
+  com.google.protobuf.ByteString
+      getRunningTimeBytes();
 }

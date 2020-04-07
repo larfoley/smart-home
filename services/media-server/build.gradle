@@ -1,0 +1,56 @@
+plugins {
+    id 'application'
+    // ASSUMES GRADLE 2.12 OR HIGHER. Use plugin version 0.7.5 with earlier gradle versions
+    id 'com.google.protobuf' version '0.8.8'
+    // Generate IntelliJ IDEA's .idea & .iml project files
+    id 'idea'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation 'io.grpc:grpc-netty-shaded:1.28.0'
+    implementation 'io.grpc:grpc-protobuf:1.28.0'
+    implementation 'io.grpc:grpc-stub:1.28.0'
+    compile group: 'org.jmdns', name: 'jmdns', version: '3.5.1'
+}
+
+protobuf {
+    protoc {
+        artifact = "com.google.protobuf:protoc:3.11.0"
+    }
+    plugins {
+        grpc {
+            artifact = 'io.grpc:protoc-gen-grpc-java:1.28.0'
+        }
+    }
+    generatedFilesBaseDir = "$projectDir/gen"
+    generateProtoTasks {
+        all()*.plugins {
+            grpc {}
+        }
+    }
+}
+
+startScripts.enabled = false
+
+sourceSets {
+    main {
+        proto {
+            srcDir '../../proto'
+        }
+        java {
+            srcDirs 'build/generated/source/proto/main/grpc'
+            srcDirs 'build/generated/source/proto/main/java'
+        }
+    }
+}
+

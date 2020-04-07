@@ -15,15 +15,15 @@ public final class HeatingProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_heating_Temperature_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_heating_Temperature_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_heating_HeatingStatus_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_heating_HeatingStatus_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_heating_HeatingStrength_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_heating_HeatingStrength_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_heating_Empty_descriptor;
   static final 
@@ -38,36 +38,34 @@ public final class HeatingProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\rheating.proto\022\007heating\"q\n\013Temperature\022" +
-      "\017\n\007degrees\030\001 \001(\005\022*\n\005scale\030\002 \001(\0162\033.heatin" +
-      "g.Temperature.Scales\"%\n\006Scales\022\013\n\007CELSIU" +
-      "S\020\000\022\016\n\nFAHRENHEIT\020\001\"F\n\rHeatingStatus\022\n\n\002" +
-      "on\030\001 \001(\010\022)\n\013temperature\030\002 \001(\0132\024.heating." +
-      "Temperature\"\007\n\005Empty2\346\001\n\007Heating\0225\n\013Chec" +
+      "\n\rheating.proto\022\007heating\"D\n\rHeatingStatu" +
+      "s\022\014\n\004isOn\030\001 \001(\010\022\020\n\010strength\030\002 \001(\005\022\023\n\013run" +
+      "ningTime\030\003 \001(\t\"#\n\017HeatingStrength\022\020\n\010str" +
+      "ength\030\002 \001(\005\"\007\n\005Empty2\353\001\n\007Heating\0225\n\013Chec" +
       "kStatus\022\016.heating.Empty\032\026.heating.Heatin" +
-      "gStatus\0220\n\006TurnOn\022\016.heating.Empty\032\026.heat" +
-      "ing.HeatingStatus\0221\n\007TurnOff\022\016.heating.E" +
-      "mpty\032\026.heating.HeatingStatus\022?\n\021AdjustTe" +
-      "mperature\022\024.heating.Temperature\032\024.heatin" +
-      "g.TemperatureB\026B\014HeatingProtoP\001\242\002\003HEAb\006p" +
-      "roto3"
+      "gStatus\022D\n\016AdjustStrength\022\030.heating.Heat" +
+      "ingStrength\032\030.heating.HeatingStrength\0220\n" +
+      "\006TurnOn\022\016.heating.Empty\032\026.heating.Heatin" +
+      "gStatus\0221\n\007TurnOff\022\016.heating.Empty\032\026.hea" +
+      "ting.HeatingStatusB\026B\014HeatingProtoP\001\242\002\003H" +
+      "EAb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_heating_Temperature_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_heating_Temperature_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_heating_Temperature_descriptor,
-        new java.lang.String[] { "Degrees", "Scale", });
     internal_static_heating_HeatingStatus_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_heating_HeatingStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_heating_HeatingStatus_descriptor,
-        new java.lang.String[] { "On", "Temperature", });
+        new java.lang.String[] { "IsOn", "Strength", "RunningTime", });
+    internal_static_heating_HeatingStrength_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_heating_HeatingStrength_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_heating_HeatingStrength_descriptor,
+        new java.lang.String[] { "Strength", });
     internal_static_heating_Empty_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_heating_Empty_fieldAccessorTable = new

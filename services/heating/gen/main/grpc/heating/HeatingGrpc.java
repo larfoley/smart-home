@@ -58,6 +58,37 @@ public final class HeatingGrpc {
     return getCheckStatusMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<heating.HeatingStrength,
+      heating.HeatingStrength> getAdjustStrengthMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AdjustStrength",
+      requestType = heating.HeatingStrength.class,
+      responseType = heating.HeatingStrength.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<heating.HeatingStrength,
+      heating.HeatingStrength> getAdjustStrengthMethod() {
+    io.grpc.MethodDescriptor<heating.HeatingStrength, heating.HeatingStrength> getAdjustStrengthMethod;
+    if ((getAdjustStrengthMethod = HeatingGrpc.getAdjustStrengthMethod) == null) {
+      synchronized (HeatingGrpc.class) {
+        if ((getAdjustStrengthMethod = HeatingGrpc.getAdjustStrengthMethod) == null) {
+          HeatingGrpc.getAdjustStrengthMethod = getAdjustStrengthMethod =
+              io.grpc.MethodDescriptor.<heating.HeatingStrength, heating.HeatingStrength>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AdjustStrength"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  heating.HeatingStrength.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  heating.HeatingStrength.getDefaultInstance()))
+              .setSchemaDescriptor(new HeatingMethodDescriptorSupplier("AdjustStrength"))
+              .build();
+        }
+      }
+    }
+    return getAdjustStrengthMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<heating.Empty,
       heating.HeatingStatus> getTurnOnMethod;
 
@@ -120,37 +151,6 @@ public final class HeatingGrpc {
     return getTurnOffMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<heating.Temperature,
-      heating.Temperature> getAdjustTemperatureMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "AdjustTemperature",
-      requestType = heating.Temperature.class,
-      responseType = heating.Temperature.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<heating.Temperature,
-      heating.Temperature> getAdjustTemperatureMethod() {
-    io.grpc.MethodDescriptor<heating.Temperature, heating.Temperature> getAdjustTemperatureMethod;
-    if ((getAdjustTemperatureMethod = HeatingGrpc.getAdjustTemperatureMethod) == null) {
-      synchronized (HeatingGrpc.class) {
-        if ((getAdjustTemperatureMethod = HeatingGrpc.getAdjustTemperatureMethod) == null) {
-          HeatingGrpc.getAdjustTemperatureMethod = getAdjustTemperatureMethod =
-              io.grpc.MethodDescriptor.<heating.Temperature, heating.Temperature>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AdjustTemperature"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  heating.Temperature.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  heating.Temperature.getDefaultInstance()))
-              .setSchemaDescriptor(new HeatingMethodDescriptorSupplier("AdjustTemperature"))
-              .build();
-        }
-      }
-    }
-    return getAdjustTemperatureMethod;
-  }
-
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -208,6 +208,13 @@ public final class HeatingGrpc {
 
     /**
      */
+    public void adjustStrength(heating.HeatingStrength request,
+        io.grpc.stub.StreamObserver<heating.HeatingStrength> responseObserver) {
+      asyncUnimplementedUnaryCall(getAdjustStrengthMethod(), responseObserver);
+    }
+
+    /**
+     */
     public void turnOn(heating.Empty request,
         io.grpc.stub.StreamObserver<heating.HeatingStatus> responseObserver) {
       asyncUnimplementedUnaryCall(getTurnOnMethod(), responseObserver);
@@ -220,13 +227,6 @@ public final class HeatingGrpc {
       asyncUnimplementedUnaryCall(getTurnOffMethod(), responseObserver);
     }
 
-    /**
-     */
-    public void adjustTemperature(heating.Temperature request,
-        io.grpc.stub.StreamObserver<heating.Temperature> responseObserver) {
-      asyncUnimplementedUnaryCall(getAdjustTemperatureMethod(), responseObserver);
-    }
-
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -236,6 +236,13 @@ public final class HeatingGrpc {
                 heating.Empty,
                 heating.HeatingStatus>(
                   this, METHODID_CHECK_STATUS)))
+          .addMethod(
+            getAdjustStrengthMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                heating.HeatingStrength,
+                heating.HeatingStrength>(
+                  this, METHODID_ADJUST_STRENGTH)))
           .addMethod(
             getTurnOnMethod(),
             asyncUnaryCall(
@@ -250,13 +257,6 @@ public final class HeatingGrpc {
                 heating.Empty,
                 heating.HeatingStatus>(
                   this, METHODID_TURN_OFF)))
-          .addMethod(
-            getAdjustTemperatureMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                heating.Temperature,
-                heating.Temperature>(
-                  this, METHODID_ADJUST_TEMPERATURE)))
           .build();
     }
   }
@@ -285,6 +285,14 @@ public final class HeatingGrpc {
 
     /**
      */
+    public void adjustStrength(heating.HeatingStrength request,
+        io.grpc.stub.StreamObserver<heating.HeatingStrength> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getAdjustStrengthMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void turnOn(heating.Empty request,
         io.grpc.stub.StreamObserver<heating.HeatingStatus> responseObserver) {
       asyncUnaryCall(
@@ -297,14 +305,6 @@ public final class HeatingGrpc {
         io.grpc.stub.StreamObserver<heating.HeatingStatus> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getTurnOffMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void adjustTemperature(heating.Temperature request,
-        io.grpc.stub.StreamObserver<heating.Temperature> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getAdjustTemperatureMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -331,6 +331,13 @@ public final class HeatingGrpc {
 
     /**
      */
+    public heating.HeatingStrength adjustStrength(heating.HeatingStrength request) {
+      return blockingUnaryCall(
+          getChannel(), getAdjustStrengthMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
     public heating.HeatingStatus turnOn(heating.Empty request) {
       return blockingUnaryCall(
           getChannel(), getTurnOnMethod(), getCallOptions(), request);
@@ -341,13 +348,6 @@ public final class HeatingGrpc {
     public heating.HeatingStatus turnOff(heating.Empty request) {
       return blockingUnaryCall(
           getChannel(), getTurnOffMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public heating.Temperature adjustTemperature(heating.Temperature request) {
-      return blockingUnaryCall(
-          getChannel(), getAdjustTemperatureMethod(), getCallOptions(), request);
     }
   }
 
@@ -375,6 +375,14 @@ public final class HeatingGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<heating.HeatingStrength> adjustStrength(
+        heating.HeatingStrength request) {
+      return futureUnaryCall(
+          getChannel().newCall(getAdjustStrengthMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<heating.HeatingStatus> turnOn(
         heating.Empty request) {
       return futureUnaryCall(
@@ -388,20 +396,12 @@ public final class HeatingGrpc {
       return futureUnaryCall(
           getChannel().newCall(getTurnOffMethod(), getCallOptions()), request);
     }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<heating.Temperature> adjustTemperature(
-        heating.Temperature request) {
-      return futureUnaryCall(
-          getChannel().newCall(getAdjustTemperatureMethod(), getCallOptions()), request);
-    }
   }
 
   private static final int METHODID_CHECK_STATUS = 0;
-  private static final int METHODID_TURN_ON = 1;
-  private static final int METHODID_TURN_OFF = 2;
-  private static final int METHODID_ADJUST_TEMPERATURE = 3;
+  private static final int METHODID_ADJUST_STRENGTH = 1;
+  private static final int METHODID_TURN_ON = 2;
+  private static final int METHODID_TURN_OFF = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -424,6 +424,10 @@ public final class HeatingGrpc {
           serviceImpl.checkStatus((heating.Empty) request,
               (io.grpc.stub.StreamObserver<heating.HeatingStatus>) responseObserver);
           break;
+        case METHODID_ADJUST_STRENGTH:
+          serviceImpl.adjustStrength((heating.HeatingStrength) request,
+              (io.grpc.stub.StreamObserver<heating.HeatingStrength>) responseObserver);
+          break;
         case METHODID_TURN_ON:
           serviceImpl.turnOn((heating.Empty) request,
               (io.grpc.stub.StreamObserver<heating.HeatingStatus>) responseObserver);
@@ -431,10 +435,6 @@ public final class HeatingGrpc {
         case METHODID_TURN_OFF:
           serviceImpl.turnOff((heating.Empty) request,
               (io.grpc.stub.StreamObserver<heating.HeatingStatus>) responseObserver);
-          break;
-        case METHODID_ADJUST_TEMPERATURE:
-          serviceImpl.adjustTemperature((heating.Temperature) request,
-              (io.grpc.stub.StreamObserver<heating.Temperature>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -498,9 +498,9 @@ public final class HeatingGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new HeatingFileDescriptorSupplier())
               .addMethod(getCheckStatusMethod())
+              .addMethod(getAdjustStrengthMethod())
               .addMethod(getTurnOnMethod())
               .addMethod(getTurnOffMethod())
-              .addMethod(getAdjustTemperatureMethod())
               .build();
         }
       }

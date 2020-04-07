@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private HeatingStatus() {
+    runningTime_ = "";
   }
 
   @java.lang.Override
@@ -50,20 +51,18 @@ private static final long serialVersionUID = 0L;
             break;
           case 8: {
 
-            on_ = input.readBool();
+            isOn_ = input.readBool();
             break;
           }
-          case 18: {
-            heating.Temperature.Builder subBuilder = null;
-            if (temperature_ != null) {
-              subBuilder = temperature_.toBuilder();
-            }
-            temperature_ = input.readMessage(heating.Temperature.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(temperature_);
-              temperature_ = subBuilder.buildPartial();
-            }
+          case 16: {
 
+            strength_ = input.readInt32();
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            runningTime_ = s;
             break;
           }
           default: {
@@ -98,37 +97,60 @@ private static final long serialVersionUID = 0L;
             heating.HeatingStatus.class, heating.HeatingStatus.Builder.class);
   }
 
-  public static final int ON_FIELD_NUMBER = 1;
-  private boolean on_;
+  public static final int ISON_FIELD_NUMBER = 1;
+  private boolean isOn_;
   /**
-   * <code>bool on = 1;</code>
-   * @return The on.
+   * <code>bool isOn = 1;</code>
+   * @return The isOn.
    */
-  public boolean getOn() {
-    return on_;
+  public boolean getIsOn() {
+    return isOn_;
   }
 
-  public static final int TEMPERATURE_FIELD_NUMBER = 2;
-  private heating.Temperature temperature_;
+  public static final int STRENGTH_FIELD_NUMBER = 2;
+  private int strength_;
   /**
-   * <code>.heating.Temperature temperature = 2;</code>
-   * @return Whether the temperature field is set.
+   * <code>int32 strength = 2;</code>
+   * @return The strength.
    */
-  public boolean hasTemperature() {
-    return temperature_ != null;
+  public int getStrength() {
+    return strength_;
+  }
+
+  public static final int RUNNINGTIME_FIELD_NUMBER = 3;
+  private volatile java.lang.Object runningTime_;
+  /**
+   * <code>string runningTime = 3;</code>
+   * @return The runningTime.
+   */
+  public java.lang.String getRunningTime() {
+    java.lang.Object ref = runningTime_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      runningTime_ = s;
+      return s;
+    }
   }
   /**
-   * <code>.heating.Temperature temperature = 2;</code>
-   * @return The temperature.
+   * <code>string runningTime = 3;</code>
+   * @return The bytes for runningTime.
    */
-  public heating.Temperature getTemperature() {
-    return temperature_ == null ? heating.Temperature.getDefaultInstance() : temperature_;
-  }
-  /**
-   * <code>.heating.Temperature temperature = 2;</code>
-   */
-  public heating.TemperatureOrBuilder getTemperatureOrBuilder() {
-    return getTemperature();
+  public com.google.protobuf.ByteString
+      getRunningTimeBytes() {
+    java.lang.Object ref = runningTime_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      runningTime_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   private byte memoizedIsInitialized = -1;
@@ -145,11 +167,14 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (on_ != false) {
-      output.writeBool(1, on_);
+    if (isOn_ != false) {
+      output.writeBool(1, isOn_);
     }
-    if (temperature_ != null) {
-      output.writeMessage(2, getTemperature());
+    if (strength_ != 0) {
+      output.writeInt32(2, strength_);
+    }
+    if (!getRunningTimeBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, runningTime_);
     }
     unknownFields.writeTo(output);
   }
@@ -160,13 +185,16 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (on_ != false) {
+    if (isOn_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(1, on_);
+        .computeBoolSize(1, isOn_);
     }
-    if (temperature_ != null) {
+    if (strength_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getTemperature());
+        .computeInt32Size(2, strength_);
+    }
+    if (!getRunningTimeBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, runningTime_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -183,13 +211,12 @@ private static final long serialVersionUID = 0L;
     }
     heating.HeatingStatus other = (heating.HeatingStatus) obj;
 
-    if (getOn()
-        != other.getOn()) return false;
-    if (hasTemperature() != other.hasTemperature()) return false;
-    if (hasTemperature()) {
-      if (!getTemperature()
-          .equals(other.getTemperature())) return false;
-    }
+    if (getIsOn()
+        != other.getIsOn()) return false;
+    if (getStrength()
+        != other.getStrength()) return false;
+    if (!getRunningTime()
+        .equals(other.getRunningTime())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -201,13 +228,13 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + ON_FIELD_NUMBER;
+    hash = (37 * hash) + ISON_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getOn());
-    if (hasTemperature()) {
-      hash = (37 * hash) + TEMPERATURE_FIELD_NUMBER;
-      hash = (53 * hash) + getTemperature().hashCode();
-    }
+        getIsOn());
+    hash = (37 * hash) + STRENGTH_FIELD_NUMBER;
+    hash = (53 * hash) + getStrength();
+    hash = (37 * hash) + RUNNINGTIME_FIELD_NUMBER;
+    hash = (53 * hash) + getRunningTime().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -341,14 +368,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      on_ = false;
+      isOn_ = false;
 
-      if (temperatureBuilder_ == null) {
-        temperature_ = null;
-      } else {
-        temperature_ = null;
-        temperatureBuilder_ = null;
-      }
+      strength_ = 0;
+
+      runningTime_ = "";
+
       return this;
     }
 
@@ -375,12 +400,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public heating.HeatingStatus buildPartial() {
       heating.HeatingStatus result = new heating.HeatingStatus(this);
-      result.on_ = on_;
-      if (temperatureBuilder_ == null) {
-        result.temperature_ = temperature_;
-      } else {
-        result.temperature_ = temperatureBuilder_.build();
-      }
+      result.isOn_ = isOn_;
+      result.strength_ = strength_;
+      result.runningTime_ = runningTime_;
       onBuilt();
       return result;
     }
@@ -429,11 +451,15 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(heating.HeatingStatus other) {
       if (other == heating.HeatingStatus.getDefaultInstance()) return this;
-      if (other.getOn() != false) {
-        setOn(other.getOn());
+      if (other.getIsOn() != false) {
+        setIsOn(other.getIsOn());
       }
-      if (other.hasTemperature()) {
-        mergeTemperature(other.getTemperature());
+      if (other.getStrength() != 0) {
+        setStrength(other.getStrength());
+      }
+      if (!other.getRunningTime().isEmpty()) {
+        runningTime_ = other.runningTime_;
+        onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -464,153 +490,140 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private boolean on_ ;
+    private boolean isOn_ ;
     /**
-     * <code>bool on = 1;</code>
-     * @return The on.
+     * <code>bool isOn = 1;</code>
+     * @return The isOn.
      */
-    public boolean getOn() {
-      return on_;
+    public boolean getIsOn() {
+      return isOn_;
     }
     /**
-     * <code>bool on = 1;</code>
-     * @param value The on to set.
+     * <code>bool isOn = 1;</code>
+     * @param value The isOn to set.
      * @return This builder for chaining.
      */
-    public Builder setOn(boolean value) {
+    public Builder setIsOn(boolean value) {
       
-      on_ = value;
+      isOn_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>bool on = 1;</code>
+     * <code>bool isOn = 1;</code>
      * @return This builder for chaining.
      */
-    public Builder clearOn() {
+    public Builder clearIsOn() {
       
-      on_ = false;
+      isOn_ = false;
       onChanged();
       return this;
     }
 
-    private heating.Temperature temperature_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        heating.Temperature, heating.Temperature.Builder, heating.TemperatureOrBuilder> temperatureBuilder_;
+    private int strength_ ;
     /**
-     * <code>.heating.Temperature temperature = 2;</code>
-     * @return Whether the temperature field is set.
+     * <code>int32 strength = 2;</code>
+     * @return The strength.
      */
-    public boolean hasTemperature() {
-      return temperatureBuilder_ != null || temperature_ != null;
+    public int getStrength() {
+      return strength_;
     }
     /**
-     * <code>.heating.Temperature temperature = 2;</code>
-     * @return The temperature.
+     * <code>int32 strength = 2;</code>
+     * @param value The strength to set.
+     * @return This builder for chaining.
      */
-    public heating.Temperature getTemperature() {
-      if (temperatureBuilder_ == null) {
-        return temperature_ == null ? heating.Temperature.getDefaultInstance() : temperature_;
-      } else {
-        return temperatureBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.heating.Temperature temperature = 2;</code>
-     */
-    public Builder setTemperature(heating.Temperature value) {
-      if (temperatureBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        temperature_ = value;
-        onChanged();
-      } else {
-        temperatureBuilder_.setMessage(value);
-      }
-
-      return this;
-    }
-    /**
-     * <code>.heating.Temperature temperature = 2;</code>
-     */
-    public Builder setTemperature(
-        heating.Temperature.Builder builderForValue) {
-      if (temperatureBuilder_ == null) {
-        temperature_ = builderForValue.build();
-        onChanged();
-      } else {
-        temperatureBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <code>.heating.Temperature temperature = 2;</code>
-     */
-    public Builder mergeTemperature(heating.Temperature value) {
-      if (temperatureBuilder_ == null) {
-        if (temperature_ != null) {
-          temperature_ =
-            heating.Temperature.newBuilder(temperature_).mergeFrom(value).buildPartial();
-        } else {
-          temperature_ = value;
-        }
-        onChanged();
-      } else {
-        temperatureBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <code>.heating.Temperature temperature = 2;</code>
-     */
-    public Builder clearTemperature() {
-      if (temperatureBuilder_ == null) {
-        temperature_ = null;
-        onChanged();
-      } else {
-        temperature_ = null;
-        temperatureBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <code>.heating.Temperature temperature = 2;</code>
-     */
-    public heating.Temperature.Builder getTemperatureBuilder() {
+    public Builder setStrength(int value) {
       
+      strength_ = value;
       onChanged();
-      return getTemperatureFieldBuilder().getBuilder();
+      return this;
     }
     /**
-     * <code>.heating.Temperature temperature = 2;</code>
+     * <code>int32 strength = 2;</code>
+     * @return This builder for chaining.
      */
-    public heating.TemperatureOrBuilder getTemperatureOrBuilder() {
-      if (temperatureBuilder_ != null) {
-        return temperatureBuilder_.getMessageOrBuilder();
+    public Builder clearStrength() {
+      
+      strength_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object runningTime_ = "";
+    /**
+     * <code>string runningTime = 3;</code>
+     * @return The runningTime.
+     */
+    public java.lang.String getRunningTime() {
+      java.lang.Object ref = runningTime_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        runningTime_ = s;
+        return s;
       } else {
-        return temperature_ == null ?
-            heating.Temperature.getDefaultInstance() : temperature_;
+        return (java.lang.String) ref;
       }
     }
     /**
-     * <code>.heating.Temperature temperature = 2;</code>
+     * <code>string runningTime = 3;</code>
+     * @return The bytes for runningTime.
      */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        heating.Temperature, heating.Temperature.Builder, heating.TemperatureOrBuilder> 
-        getTemperatureFieldBuilder() {
-      if (temperatureBuilder_ == null) {
-        temperatureBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            heating.Temperature, heating.Temperature.Builder, heating.TemperatureOrBuilder>(
-                getTemperature(),
-                getParentForChildren(),
-                isClean());
-        temperature_ = null;
+    public com.google.protobuf.ByteString
+        getRunningTimeBytes() {
+      java.lang.Object ref = runningTime_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        runningTime_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
       }
-      return temperatureBuilder_;
+    }
+    /**
+     * <code>string runningTime = 3;</code>
+     * @param value The runningTime to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRunningTime(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      runningTime_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string runningTime = 3;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearRunningTime() {
+      
+      runningTime_ = getDefaultInstance().getRunningTime();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string runningTime = 3;</code>
+     * @param value The bytes for runningTime to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRunningTimeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      runningTime_ = value;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
