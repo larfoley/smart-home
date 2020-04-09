@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="628b65fe-c532-4634-a04e-9cb7d724bd2f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../proto/file_storage.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../proto/media_player.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/file_storage.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/FileInterface.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/FileStorageImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/FileStorageService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/MusicFile.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/TestGUI$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/TestGUI.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/file_storage/Empty$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/file_storage/Empty$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/file_storage/Empty.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/file_storage/EmptyOrBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/file_storage/FileObject$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/file_storage/FileObject$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/file_storage/FileObject.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/file_storage/FileObjectOrBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/file_storage/FileStorageGrpc$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/file_storage/FileStorageGrpc$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/file_storage/FileStorageGrpc$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/file_storage/FileStorageGrpc$FileStorageBaseDescriptorSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/file_storage/FileStorageGrpc$FileStorageBlockingStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/file_storage/FileStorageGrpc$FileStorageFileDescriptorSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/file_storage/FileStorageGrpc$FileStorageFutureStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/file_storage/FileStorageGrpc$FileStorageImplBase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/file_storage/FileStorageGrpc$FileStorageMethodDescriptorSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/file_storage/FileStorageGrpc$FileStorageStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/file_storage/FileStorageGrpc$MethodHandlers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/file_storage/FileStorageGrpc.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/file_storage/FileStorageProto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/heating/Empty$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/heating/Empty$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/heating/Empty.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/heating/EmptyOrBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/heating/HeatingGrpc$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/heating/HeatingGrpc$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/heating/HeatingGrpc$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/heating/HeatingGrpc$HeatingBaseDescriptorSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/heating/HeatingGrpc$HeatingBlockingStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/heating/HeatingGrpc$HeatingFileDescriptorSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/heating/HeatingGrpc$HeatingFutureStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/heating/HeatingGrpc$HeatingImplBase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/heating/HeatingGrpc$HeatingMethodDescriptorSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/heating/HeatingGrpc$HeatingStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/heating/HeatingGrpc$MethodHandlers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/heating/HeatingGrpc.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/heating/HeatingProto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/heating/HeatingStatus$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/heating/HeatingStatus$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/heating/HeatingStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/heating/HeatingStatusOrBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/heating/HeatingStrength$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/heating/HeatingStrength$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/heating/HeatingStrength.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/heating/HeatingStrengthOrBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/media_player/Empty$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/media_player/Empty$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/media_player/Empty.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/media_player/EmptyOrBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/media_player/MediaPlayerGrpc$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/media_player/MediaPlayerGrpc$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/media_player/MediaPlayerGrpc$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/media_player/MediaPlayerGrpc$MediaPlayerBaseDescriptorSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/media_player/MediaPlayerGrpc$MediaPlayerBlockingStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/media_player/MediaPlayerGrpc$MediaPlayerFileDescriptorSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/media_player/MediaPlayerGrpc$MediaPlayerFutureStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/media_player/MediaPlayerGrpc$MediaPlayerImplBase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/media_player/MediaPlayerGrpc$MediaPlayerMethodDescriptorSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/media_player/MediaPlayerGrpc$MediaPlayerStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/media_player/MediaPlayerGrpc$MethodHandlers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/media_player/MediaPlayerGrpc.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/media_player/MediaPlayerProto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/annotations.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/auth.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/backend.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/billing.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/client.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/config_change.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/consumer.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/context.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/control.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/distribution.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/documentation.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/endpoint.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/field_behavior.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/http.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/httpbody.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/label.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/launch_stage.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/log.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/logging.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/metric.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/monitored_resource.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/monitoring.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/quota.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/resource.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/service.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/source_info.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/system_parameter.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/usage.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/cloud/audit/audit_log.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/geo/type/viewport.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/logging/type/http_request.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/logging/type/log_severity.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/longrunning/operations.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/protobuf/any.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/protobuf/api.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/protobuf/compiler/plugin.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/protobuf/descriptor.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/protobuf/duration.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/protobuf/empty.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/protobuf/field_mask.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/protobuf/source_context.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/protobuf/struct.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/protobuf/timestamp.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/protobuf/type.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/protobuf/wrappers.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/rpc/code.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/rpc/error_details.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/rpc/status.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/type/calendar_period.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/type/color.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/type/date.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/type/dayofweek.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/type/expr.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/type/fraction.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/type/latlng.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/type/money.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/type/postal_address.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/type/quaternion.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/type/timeofday.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/file_storage.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/annotations.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/auth.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/backend.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/billing.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/client.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/config_change.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/consumer.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/context.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/control.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/distribution.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/documentation.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/endpoint.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/field_behavior.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/http.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/httpbody.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/label.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/launch_stage.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/log.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/logging.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/metric.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/monitored_resource.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/monitoring.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/quota.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/resource.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/service.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/source_info.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/system_parameter.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/usage.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/cloud/audit/audit_log.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/geo/type/viewport.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/logging/type/http_request.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/logging/type/log_severity.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/longrunning/operations.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/protobuf/any.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/protobuf/api.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/protobuf/compiler/plugin.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/protobuf/descriptor.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/protobuf/duration.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/protobuf/empty.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/protobuf/field_mask.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/protobuf/source_context.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/protobuf/struct.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/protobuf/timestamp.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/protobuf/type.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/protobuf/wrappers.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/rpc/code.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/rpc/error_details.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/rpc/status.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/type/calendar_period.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/type/color.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/type/date.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/type/dayofweek.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/type/expr.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/type/fraction.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/type/latlng.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/type/money.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/type/postal_address.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/type/quaternion.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/type/timeofday.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/heating.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/media_player.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/file_storage.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/heating.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gen/main/grpc/heating/HeatingGrpc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gen/main/grpc/media_player/MediaPlayerGrpc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gen/main/java/heating/Empty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gen/main/java/heating/EmptyOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gen/main/java/heating/HeatingProto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gen/main/java/heating/HeatingStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gen/main/java/heating/HeatingStatusOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gen/main/java/heating/HeatingStrength.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gen/main/java/heating/HeatingStrengthOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gen/main/java/media_player/Empty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gen/main/java/media_player/EmptyOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gen/main/java/media_player/MediaPlayerProto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/FileBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/FileInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/FileStorageImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/FileStorageServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/MovieFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/MusicFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TestGUI.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TestGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/.idea/heating.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/HeatingClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/HeatingGui.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/HeatingServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/file_storage/Empty$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/file_storage/Empty$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/file_storage/Empty.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/file_storage/EmptyOrBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/file_storage/FileObject$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/file_storage/FileObject$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/file_storage/FileObject.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/file_storage/FileObjectOrBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/file_storage/FileStorageGrpc$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/file_storage/FileStorageGrpc$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/file_storage/FileStorageGrpc$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/file_storage/FileStorageGrpc$FileStorageBaseDescriptorSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/file_storage/FileStorageGrpc$FileStorageBlockingStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/file_storage/FileStorageGrpc$FileStorageFileDescriptorSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/file_storage/FileStorageGrpc$FileStorageFutureStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/file_storage/FileStorageGrpc$FileStorageImplBase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/file_storage/FileStorageGrpc$FileStorageMethodDescriptorSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/file_storage/FileStorageGrpc$FileStorageStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/file_storage/FileStorageGrpc$MethodHandlers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/file_storage/FileStorageGrpc.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/file_storage/FileStorageProto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/media_player/Empty$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/media_player/Empty$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/media_player/Empty.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/media_player/EmptyOrBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/media_player/MediaPlayerGrpc$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/media_player/MediaPlayerGrpc$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/media_player/MediaPlayerGrpc$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/media_player/MediaPlayerGrpc$MediaPlayerBaseDescriptorSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/media_player/MediaPlayerGrpc$MediaPlayerBlockingStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/media_player/MediaPlayerGrpc$MediaPlayerFileDescriptorSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/media_player/MediaPlayerGrpc$MediaPlayerFutureStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/media_player/MediaPlayerGrpc$MediaPlayerImplBase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/media_player/MediaPlayerGrpc$MediaPlayerMethodDescriptorSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/media_player/MediaPlayerGrpc$MediaPlayerStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/media_player/MediaPlayerGrpc$MethodHandlers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/media_player/MediaPlayerGrpc.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/media_player/MediaPlayerProto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/resources/main/file_storage.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/build/resources/main/media_player.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/gen/main/grpc/file_storage/FileStorageGrpc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/gen/main/grpc/media_player/MediaPlayerGrpc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/gen/main/java/file_storage/Empty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/gen/main/java/file_storage/EmptyOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/gen/main/java/file_storage/FileObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/gen/main/java/file_storage/FileObjectOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/gen/main/java/file_storage/FileStorageProto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/gen/main/java/media_player/Empty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/gen/main/java/media_player/EmptyOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/gen/main/java/media_player/MediaPlayerProto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/src/main/java/HeatingClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/src/main/java/HeatingGui.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../heating/src/main/java/HeatingGui.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/.gradle/5.2.1/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/.gradle/5.2.1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/.idea/media_player.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/MediaPlayerImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/MediaPlayerService$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/MediaPlayerService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/file_storage/Empty$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/file_storage/Empty$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/file_storage/Empty.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/file_storage/EmptyOrBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/file_storage/FileObject$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/file_storage/FileObject$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/file_storage/FileObject.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/file_storage/FileObjectOrBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/file_storage/FileStorageGrpc$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/file_storage/FileStorageGrpc$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/file_storage/FileStorageGrpc$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/file_storage/FileStorageGrpc$FileStorageBaseDescriptorSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/file_storage/FileStorageGrpc$FileStorageBlockingStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/file_storage/FileStorageGrpc$FileStorageFileDescriptorSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/file_storage/FileStorageGrpc$FileStorageFutureStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/file_storage/FileStorageGrpc$FileStorageImplBase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/file_storage/FileStorageGrpc$FileStorageMethodDescriptorSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/file_storage/FileStorageGrpc$FileStorageStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/file_storage/FileStorageGrpc$MethodHandlers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/file_storage/FileStorageGrpc.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/file_storage/FileStorageProto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/heating/Empty$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/heating/Empty$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/heating/Empty.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/heating/EmptyOrBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/heating/HeatingGrpc$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/heating/HeatingGrpc$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/heating/HeatingGrpc$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/heating/HeatingGrpc$HeatingBaseDescriptorSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/heating/HeatingGrpc$HeatingBlockingStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/heating/HeatingGrpc$HeatingFileDescriptorSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/heating/HeatingGrpc$HeatingFutureStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/heating/HeatingGrpc$HeatingImplBase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/heating/HeatingGrpc$HeatingMethodDescriptorSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/heating/HeatingGrpc$HeatingStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/heating/HeatingGrpc$MethodHandlers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/heating/HeatingGrpc.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/heating/HeatingProto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/heating/HeatingStatus$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/heating/HeatingStatus$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/heating/HeatingStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/heating/HeatingStatusOrBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/heating/HeatingStrength$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/heating/HeatingStrength$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/heating/HeatingStrength.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/heating/HeatingStrengthOrBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/media_player/Empty$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/media_player/Empty$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/media_player/Empty.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/media_player/EmptyOrBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/media_player/MediaPlayerGrpc$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/media_player/MediaPlayerGrpc$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/media_player/MediaPlayerGrpc$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/media_player/MediaPlayerGrpc$MediaPlayerBaseDescriptorSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/media_player/MediaPlayerGrpc$MediaPlayerBlockingStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/media_player/MediaPlayerGrpc$MediaPlayerFileDescriptorSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/media_player/MediaPlayerGrpc$MediaPlayerFutureStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/media_player/MediaPlayerGrpc$MediaPlayerImplBase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/media_player/MediaPlayerGrpc$MediaPlayerMethodDescriptorSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/media_player/MediaPlayerGrpc$MediaPlayerStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/media_player/MediaPlayerGrpc$MethodHandlers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/media_player/MediaPlayerGrpc.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/classes/java/main/media_player/MediaPlayerProto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/api/annotations.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/api/auth.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/api/backend.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/api/billing.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/api/client.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/api/config_change.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/api/consumer.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/api/context.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/api/control.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/api/distribution.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/api/documentation.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/api/endpoint.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/api/field_behavior.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/api/http.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/api/httpbody.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/api/label.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/api/launch_stage.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/api/log.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/api/logging.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/api/metric.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/api/monitored_resource.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/api/monitoring.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/api/quota.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/api/resource.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/api/service.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/api/source_info.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/api/system_parameter.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/api/usage.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/cloud/audit/audit_log.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/geo/type/viewport.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/logging/type/http_request.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/logging/type/log_severity.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/longrunning/operations.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/protobuf/any.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/protobuf/api.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/protobuf/compiler/plugin.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/protobuf/descriptor.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/protobuf/duration.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/protobuf/empty.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/protobuf/field_mask.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/protobuf/source_context.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/protobuf/struct.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/protobuf/timestamp.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/protobuf/type.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/protobuf/wrappers.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/rpc/code.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/rpc/error_details.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/rpc/status.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/type/calendar_period.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/type/color.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/type/date.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/type/dayofweek.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/type/expr.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/type/fraction.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/type/latlng.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/type/money.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/type/postal_address.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/type/quaternion.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/main/google/type/timeofday.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/file_storage.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/api/annotations.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/api/auth.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/api/backend.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/api/billing.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/api/client.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/api/config_change.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/api/consumer.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/api/context.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/api/control.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/api/distribution.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/api/documentation.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/api/endpoint.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/api/field_behavior.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/api/http.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/api/httpbody.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/api/label.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/api/launch_stage.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/api/log.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/api/logging.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/api/metric.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/api/monitored_resource.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/api/monitoring.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/api/quota.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/api/resource.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/api/service.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/api/source_info.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/api/system_parameter.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/api/usage.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/cloud/audit/audit_log.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/geo/type/viewport.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/logging/type/http_request.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/logging/type/log_severity.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/longrunning/operations.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/protobuf/any.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/protobuf/api.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/protobuf/compiler/plugin.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/protobuf/descriptor.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/protobuf/duration.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/protobuf/empty.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/protobuf/field_mask.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/protobuf/source_context.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/protobuf/struct.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/protobuf/timestamp.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/protobuf/type.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/protobuf/wrappers.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/rpc/code.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/rpc/error_details.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/rpc/status.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/type/calendar_period.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/type/color.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/type/date.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/type/dayofweek.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/type/expr.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/type/fraction.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/type/latlng.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/type/money.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/type/postal_address.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/type/quaternion.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/google/type/timeofday.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/heating.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/extracted-include-protos/test/media_player.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/resources/main/file_storage.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/resources/main/heating.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/build/resources/main/media_player.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/gen/main/grpc/file_storage/FileStorageGrpc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/gen/main/grpc/heating/HeatingGrpc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/gen/main/grpc/media_player/MediaPlayerGrpc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/gen/main/java/file_storage/Empty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/gen/main/java/file_storage/EmptyOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/gen/main/java/file_storage/FileObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/gen/main/java/file_storage/FileObjectOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/gen/main/java/file_storage/FileStorageProto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/gen/main/java/heating/Empty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/gen/main/java/heating/EmptyOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/gen/main/java/heating/HeatingProto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/gen/main/java/heating/HeatingStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/gen/main/java/heating/HeatingStatusOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/gen/main/java/heating/HeatingStrength.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/gen/main/java/heating/HeatingStrengthOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/gen/main/java/media_player/Empty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/gen/main/java/media_player/EmptyOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/gen/main/java/media_player/MediaPlayerProto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/src/main/java/GetRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/src/main/java/HTTPServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/src/main/java/MediaPlayerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media_player/src/main/java/MediaPlayerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../heating/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../heating/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../heating/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../heating/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../heating/.gradle/5.2.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../heating/.gradle/5.2.1/fileContent/fileContent.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../heating/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../heating/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../heating/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../heating/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../heating/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../heating/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../heating/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../heating/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../heating/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../heating/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../heating/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../heating/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../heating/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../heating/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../heating/build/classes/java/main/HeatingImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../heating/build/classes/java/main/HeatingImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../heating/build/classes/java/main/HeatingService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../heating/src/main/java/HeatingImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../heating/src/main/java/HeatingImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../heating/src/main/java/HeatingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../heating/src/main/java/HeatingServer.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1aDcCwYA55ExeO5oMQg9R7OfluL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="463" />
+    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/FooBar" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager" selected="Application.TestGUI">
+    <configuration name="FileStorageServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FileStorageServer" />
+      <module name="file_storage.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestGUI" />
+      <module name="file_storage.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.FileStorageServer" />
+        <item itemvalue="Application.TestGUI" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="628b65fe-c532-4634-a04e-9cb7d724bd2f" name="Default Changelist" comment="" />
+      <created>1586273480672</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586273480672</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="801" y="265" width="374" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1586430914391">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="801" y="265" width="374" height="575" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1586430914391" />
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1586281340818">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1586281340818" />
+    <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1586439955907">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1586439955907" />
+    <state width="1807" height="278" key="GridCell.Tab.0.center" timestamp="1586439955907">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="278" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1586439955907" />
+    <state width="1807" height="278" key="GridCell.Tab.0.left" timestamp="1586439955907">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="278" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1586439955907" />
+    <state width="1807" height="278" key="GridCell.Tab.0.right" timestamp="1586439955907">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="278" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1586439955907" />
+    <state x="482" y="187" key="SettingsEditor" timestamp="1586278647147">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="482" y="187" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1586278647147" />
+    <state x="302" y="146" width="1372" height="813" key="new project wizard" timestamp="1586286196053">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="302" y="146" width="1372" height="813" key="new project wizard/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1586286196053" />
+  </component>
+</project>
