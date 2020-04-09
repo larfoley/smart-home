@@ -9,37 +9,49 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 
-public class HeatingService {
-    private static final Logger logger = Logger.getLogger(HeatingService.class.getName());
+public class HeatingServer {
+    private static final Logger logger = Logger.getLogger(HeatingServer.class.getName());
 
     private Server server;
 
-    private void start() throws IOException {
-        int port = 50055;
+    public static final int PORT = 50055;
 
-        server = ServerBuilder.forPort(port)
+    private void start() throws IOException {
+
+        server = ServerBuilder.forPort(PORT)
                 .addService(new HeatingImpl())
                 .build()
                 .start();
 
-        // Create a JmDNS instance
-        JmDNS jmdns = JmDNS.create(InetAddress.getLocalHost());
+        registerJmDNS();
 
-        // Register a service
-        ServiceInfo serviceInfo = ServiceInfo.create("_http._tcp.local.", "example", 1234, "path=index.html");
-        jmdns.registerService(serviceInfo);
-
-        logger.info("Server started, listening on " + port);
+        logger.info("Server started, listening on " + PORT);
 
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             System.err.println("* shutting down gRPC server since JVM is shutting down");
             try {
-                HeatingService.this.stop();
+                HeatingServer.this.stop();
             } catch (InterruptedException e) {
                 e.printStackTrace(System.err);
             }
             System.err.println("* server shut down");
         }));
+    }
+
+    private void registerJmDNS() {
+        try {
+            JmDNS jmdns = JmDNS.create(InetAddress.getLocalHost());
+
+            ServiceInfo serviceInfo = ServiceInfo.create("_http._tcp.local.", "heating", 1237, "path=index.html");
+            jmdns.registerService(serviceInfo);
+
+            Thread.sleep(25000);
+
+            jmdns.unregisterAllServices();
+
+        } catch (IOException | InterruptedException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     private void stop() throws InterruptedException {
@@ -55,7 +67,7 @@ public class HeatingService {
     }
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        final HeatingService server = new HeatingService();
+        final HeatingServer server = new HeatingServer();
         server.start();
         server.blockUntilShutdown();
     }
