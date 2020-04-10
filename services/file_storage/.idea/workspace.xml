@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="628b65fe-c532-4634-a04e-9cb7d724bd2f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FileStorageServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FileStorageServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../heating/src/main/java/HeatingServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../heating/src/main/java/HeatingServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../media_player/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../media_player/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../media_player/src/main/java/MediaPlayerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../media_player/src/main/java/MediaPlayerImpl.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1aDcCwYA55ExeO5oMQg9R7OfluL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="463" />
+    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/FooBar" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager" selected="Application.TestGUI">
+    <configuration name="FileStorageServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FileStorageServer" />
+      <module name="file_storage.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestGUI" />
+      <module name="file_storage.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.FileStorageServer" />
+        <item itemvalue="Application.TestGUI" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="628b65fe-c532-4634-a04e-9cb7d724bd2f" name="Default Changelist" comment="" />
+      <created>1586273480672</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586273480672</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="801" y="265" width="374" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1586430914391">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="801" y="265" width="374" height="575" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1586430914391" />
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1586281340818">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1586281340818" />
+    <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1586439955907">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1586439955907" />
+    <state width="1807" height="278" key="GridCell.Tab.0.center" timestamp="1586439955907">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="278" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1586439955907" />
+    <state width="1807" height="278" key="GridCell.Tab.0.left" timestamp="1586439955907">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="278" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1586439955907" />
+    <state width="1807" height="278" key="GridCell.Tab.0.right" timestamp="1586439955907">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="278" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1586439955907" />
+    <state x="482" y="187" key="SettingsEditor" timestamp="1586278647147">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="482" y="187" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1586278647147" />
+    <state x="302" y="146" width="1372" height="813" key="new project wizard" timestamp="1586286196053">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="302" y="146" width="1372" height="813" key="new project wizard/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1586286196053" />
+  </component>
+</project>

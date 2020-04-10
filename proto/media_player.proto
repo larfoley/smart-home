@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_outer_classname = "MediaPlayerProto";
+option objc_class_prefix = "MPR";
+
+package media_player;
+
+service MediaPlayer {
+    rpc PlayMedia(Empty) returns (Empty);
+}
+
+message Empty {}

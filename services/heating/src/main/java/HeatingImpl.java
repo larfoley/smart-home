@@ -19,42 +19,11 @@ class HeatingImpl extends HeatingGrpc.HeatingImplBase {
         this.isOn = false;
         this.heatingStrength = this.DEFAULT_HEATING_STRENGTH;
         this.runningTime = 0;
+
     }
 
     public static void main(String[] args) {
         new HeatingImpl();
-    }
-
-    public String getRunningTimeString() {
-        List<TimeUnit> units = new ArrayList<TimeUnit>(Arrays.asList(
-                TimeUnit.DAYS,
-                TimeUnit.HOURS,
-                TimeUnit.MINUTES,
-                TimeUnit.SECONDS
-        ));
-        String result = "";
-        long nowTime = new Date().getTime();
-        long startTime = this.runningTime == 0 ? nowTime : this.runningTime;
-        long diffInMilliseconds = nowTime - startTime;
-        long millisecondsRest = diffInMilliseconds;
-
-        for ( TimeUnit unit : units ) {
-            long diff = unit.convert(millisecondsRest,TimeUnit.MILLISECONDS);
-            long diffInMillisecondsForUnit = unit.toMillis(diff);
-            millisecondsRest = millisecondsRest - diffInMillisecondsForUnit;
-
-            result += diff + " " + unit.toString().toLowerCase() + " " ;
-        }
-
-        return result;
-    }
-
-    public HeatingStatus getHeatingStatus() {
-        return HeatingStatus.newBuilder()
-                .setIsOn(this.isOn)
-                .setStrength(this.heatingStrength)
-                .setRunningTime(getRunningTimeString())
-                .build();
     }
 
     @Override
@@ -94,5 +63,39 @@ class HeatingImpl extends HeatingGrpc.HeatingImplBase {
 
         responseObserver.onNext(HeatingStrength.newBuilder().setStrength(this.heatingStrength).build());
         responseObserver.onCompleted();
+    }
+
+    private String getRunningTimeString() {
+        List<TimeUnit> units = new ArrayList<>(Arrays.asList(
+                TimeUnit.DAYS,
+                TimeUnit.HOURS,
+                TimeUnit.MINUTES,
+                TimeUnit.SECONDS
+        ));
+
+        String result = "";
+
+        long nowTime = new Date().getTime();
+        long startTime = this.runningTime == 0 ? nowTime : this.runningTime;
+        long diffInMilliseconds = nowTime - startTime;
+
+        for ( TimeUnit unit : units ) {
+            long diff = unit.convert(diffInMilliseconds,TimeUnit.MILLISECONDS);
+            long diffInMillisecondsForUnit = unit.toMillis(diff);
+
+            diffInMilliseconds = diffInMilliseconds - diffInMillisecondsForUnit;
+
+            result += diff + " " + unit.toString().toLowerCase() + " " ;
+        }
+
+        return result;
+    }
+
+    private HeatingStatus getHeatingStatus() {
+        return HeatingStatus.newBuilder()
+                .setIsOn(this.isOn)
+                .setStrength(this.heatingStrength)
+                .setRunningTime(getRunningTimeString())
+                .build();
     }
 }

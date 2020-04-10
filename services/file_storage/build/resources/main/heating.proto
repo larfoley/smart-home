@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_outer_classname = "HeatingProto";
+option objc_class_prefix = "HEA";
+
+package heating;
+
+service Heating {
+    rpc CheckStatus(Empty) returns (HeatingStatus);
+
+    rpc AdjustStrength(HeatingStrength) returns (HeatingStrength);
+
+    rpc TurnOn(Empty) returns (HeatingStatus);
+
+    rpc TurnOff(Empty) returns (HeatingStatus);
+}
+
+message HeatingStatus {
+    bool isOn = 1;
+    int32 strength = 2;
+    string runningTime = 3;
+}
+
+
+message HeatingStrength {
+    int32 strength = 2;
+}
+
+message Empty {}
