@@ -42,7 +42,7 @@ public class HeatingServer {
         try {
             JmDNS jmdns = JmDNS.create(InetAddress.getLocalHost());
 
-            ServiceInfo serviceInfo = ServiceInfo.create("_http._tcp.local.", "heating", 1237, "path=index.html");
+            ServiceInfo serviceInfo = ServiceInfo.create("_http._tcp.local.", "heating", PORT, "path=index.html");
             jmdns.registerService(serviceInfo);
 
             Thread.sleep(25000);
