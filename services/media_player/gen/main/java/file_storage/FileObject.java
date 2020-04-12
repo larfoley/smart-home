@@ -17,7 +17,7 @@ private static final long serialVersionUID = 0L;
   }
   private FileObject() {
     name_ = "";
-    content_ = "";
+    content_ = java.util.Collections.emptyList();
     extension_ = "";
   }
 
@@ -41,6 +41,7 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
+    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -58,9 +59,12 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            content_ = s;
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              content_ = new java.util.ArrayList<file_storage.FileData>();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            content_.add(
+                input.readMessage(file_storage.FileData.parser(), extensionRegistry));
             break;
           }
           case 26: {
@@ -84,6 +88,9 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        content_ = java.util.Collections.unmodifiableList(content_);
+      }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
@@ -138,39 +145,38 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONTENT_FIELD_NUMBER = 2;
-  private volatile java.lang.Object content_;
+  private java.util.List<file_storage.FileData> content_;
   /**
-   * <code>string content = 2;</code>
-   * @return The content.
+   * <code>repeated .file_storage.FileData content = 2;</code>
    */
-  public java.lang.String getContent() {
-    java.lang.Object ref = content_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      content_ = s;
-      return s;
-    }
+  public java.util.List<file_storage.FileData> getContentList() {
+    return content_;
   }
   /**
-   * <code>string content = 2;</code>
-   * @return The bytes for content.
+   * <code>repeated .file_storage.FileData content = 2;</code>
    */
-  public com.google.protobuf.ByteString
-      getContentBytes() {
-    java.lang.Object ref = content_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      content_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public java.util.List<? extends file_storage.FileDataOrBuilder> 
+      getContentOrBuilderList() {
+    return content_;
+  }
+  /**
+   * <code>repeated .file_storage.FileData content = 2;</code>
+   */
+  public int getContentCount() {
+    return content_.size();
+  }
+  /**
+   * <code>repeated .file_storage.FileData content = 2;</code>
+   */
+  public file_storage.FileData getContent(int index) {
+    return content_.get(index);
+  }
+  /**
+   * <code>repeated .file_storage.FileData content = 2;</code>
+   */
+  public file_storage.FileDataOrBuilder getContentOrBuilder(
+      int index) {
+    return content_.get(index);
   }
 
   public static final int EXTENSION_FIELD_NUMBER = 3;
@@ -226,8 +232,8 @@ private static final long serialVersionUID = 0L;
     if (!getNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
     }
-    if (!getContentBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, content_);
+    for (int i = 0; i < content_.size(); i++) {
+      output.writeMessage(2, content_.get(i));
     }
     if (!getExtensionBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, extension_);
@@ -244,8 +250,9 @@ private static final long serialVersionUID = 0L;
     if (!getNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
     }
-    if (!getContentBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, content_);
+    for (int i = 0; i < content_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, content_.get(i));
     }
     if (!getExtensionBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, extension_);
@@ -267,8 +274,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getName()
         .equals(other.getName())) return false;
-    if (!getContent()
-        .equals(other.getContent())) return false;
+    if (!getContentList()
+        .equals(other.getContentList())) return false;
     if (!getExtension()
         .equals(other.getExtension())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
@@ -284,8 +291,10 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + NAME_FIELD_NUMBER;
     hash = (53 * hash) + getName().hashCode();
-    hash = (37 * hash) + CONTENT_FIELD_NUMBER;
-    hash = (53 * hash) + getContent().hashCode();
+    if (getContentCount() > 0) {
+      hash = (37 * hash) + CONTENT_FIELD_NUMBER;
+      hash = (53 * hash) + getContentList().hashCode();
+    }
     hash = (37 * hash) + EXTENSION_FIELD_NUMBER;
     hash = (53 * hash) + getExtension().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
@@ -416,6 +425,7 @@ private static final long serialVersionUID = 0L;
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
+        getContentFieldBuilder();
       }
     }
     @java.lang.Override
@@ -423,8 +433,12 @@ private static final long serialVersionUID = 0L;
       super.clear();
       name_ = "";
 
-      content_ = "";
-
+      if (contentBuilder_ == null) {
+        content_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+      } else {
+        contentBuilder_.clear();
+      }
       extension_ = "";
 
       return this;
@@ -453,8 +467,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public file_storage.FileObject buildPartial() {
       file_storage.FileObject result = new file_storage.FileObject(this);
+      int from_bitField0_ = bitField0_;
       result.name_ = name_;
-      result.content_ = content_;
+      if (contentBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          content_ = java.util.Collections.unmodifiableList(content_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.content_ = content_;
+      } else {
+        result.content_ = contentBuilder_.build();
+      }
       result.extension_ = extension_;
       onBuilt();
       return result;
@@ -508,9 +531,31 @@ private static final long serialVersionUID = 0L;
         name_ = other.name_;
         onChanged();
       }
-      if (!other.getContent().isEmpty()) {
-        content_ = other.content_;
-        onChanged();
+      if (contentBuilder_ == null) {
+        if (!other.content_.isEmpty()) {
+          if (content_.isEmpty()) {
+            content_ = other.content_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureContentIsMutable();
+            content_.addAll(other.content_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.content_.isEmpty()) {
+          if (contentBuilder_.isEmpty()) {
+            contentBuilder_.dispose();
+            contentBuilder_ = null;
+            content_ = other.content_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+            contentBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getContentFieldBuilder() : null;
+          } else {
+            contentBuilder_.addAllMessages(other.content_);
+          }
+        }
       }
       if (!other.getExtension().isEmpty()) {
         extension_ = other.extension_;
@@ -544,6 +589,7 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object name_ = "";
     /**
@@ -621,80 +667,244 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object content_ = "";
+    private java.util.List<file_storage.FileData> content_ =
+      java.util.Collections.emptyList();
+    private void ensureContentIsMutable() {
+      if (!((bitField0_ & 0x00000001) != 0)) {
+        content_ = new java.util.ArrayList<file_storage.FileData>(content_);
+        bitField0_ |= 0x00000001;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        file_storage.FileData, file_storage.FileData.Builder, file_storage.FileDataOrBuilder> contentBuilder_;
+
     /**
-     * <code>string content = 2;</code>
-     * @return The content.
+     * <code>repeated .file_storage.FileData content = 2;</code>
      */
-    public java.lang.String getContent() {
-      java.lang.Object ref = content_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        content_ = s;
-        return s;
+    public java.util.List<file_storage.FileData> getContentList() {
+      if (contentBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(content_);
       } else {
-        return (java.lang.String) ref;
+        return contentBuilder_.getMessageList();
       }
     }
     /**
-     * <code>string content = 2;</code>
-     * @return The bytes for content.
+     * <code>repeated .file_storage.FileData content = 2;</code>
      */
-    public com.google.protobuf.ByteString
-        getContentBytes() {
-      java.lang.Object ref = content_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        content_ = b;
-        return b;
+    public int getContentCount() {
+      if (contentBuilder_ == null) {
+        return content_.size();
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return contentBuilder_.getCount();
       }
     }
     /**
-     * <code>string content = 2;</code>
-     * @param value The content to set.
-     * @return This builder for chaining.
+     * <code>repeated .file_storage.FileData content = 2;</code>
+     */
+    public file_storage.FileData getContent(int index) {
+      if (contentBuilder_ == null) {
+        return content_.get(index);
+      } else {
+        return contentBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .file_storage.FileData content = 2;</code>
      */
     public Builder setContent(
-        java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
-      content_ = value;
-      onChanged();
+        int index, file_storage.FileData value) {
+      if (contentBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureContentIsMutable();
+        content_.set(index, value);
+        onChanged();
+      } else {
+        contentBuilder_.setMessage(index, value);
+      }
       return this;
     }
     /**
-     * <code>string content = 2;</code>
-     * @return This builder for chaining.
+     * <code>repeated .file_storage.FileData content = 2;</code>
+     */
+    public Builder setContent(
+        int index, file_storage.FileData.Builder builderForValue) {
+      if (contentBuilder_ == null) {
+        ensureContentIsMutable();
+        content_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        contentBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .file_storage.FileData content = 2;</code>
+     */
+    public Builder addContent(file_storage.FileData value) {
+      if (contentBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureContentIsMutable();
+        content_.add(value);
+        onChanged();
+      } else {
+        contentBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .file_storage.FileData content = 2;</code>
+     */
+    public Builder addContent(
+        int index, file_storage.FileData value) {
+      if (contentBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureContentIsMutable();
+        content_.add(index, value);
+        onChanged();
+      } else {
+        contentBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .file_storage.FileData content = 2;</code>
+     */
+    public Builder addContent(
+        file_storage.FileData.Builder builderForValue) {
+      if (contentBuilder_ == null) {
+        ensureContentIsMutable();
+        content_.add(builderForValue.build());
+        onChanged();
+      } else {
+        contentBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .file_storage.FileData content = 2;</code>
+     */
+    public Builder addContent(
+        int index, file_storage.FileData.Builder builderForValue) {
+      if (contentBuilder_ == null) {
+        ensureContentIsMutable();
+        content_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        contentBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .file_storage.FileData content = 2;</code>
+     */
+    public Builder addAllContent(
+        java.lang.Iterable<? extends file_storage.FileData> values) {
+      if (contentBuilder_ == null) {
+        ensureContentIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, content_);
+        onChanged();
+      } else {
+        contentBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .file_storage.FileData content = 2;</code>
      */
     public Builder clearContent() {
-      
-      content_ = getDefaultInstance().getContent();
-      onChanged();
+      if (contentBuilder_ == null) {
+        content_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+      } else {
+        contentBuilder_.clear();
+      }
       return this;
     }
     /**
-     * <code>string content = 2;</code>
-     * @param value The bytes for content to set.
-     * @return This builder for chaining.
+     * <code>repeated .file_storage.FileData content = 2;</code>
      */
-    public Builder setContentBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
-      content_ = value;
-      onChanged();
+    public Builder removeContent(int index) {
+      if (contentBuilder_ == null) {
+        ensureContentIsMutable();
+        content_.remove(index);
+        onChanged();
+      } else {
+        contentBuilder_.remove(index);
+      }
       return this;
+    }
+    /**
+     * <code>repeated .file_storage.FileData content = 2;</code>
+     */
+    public file_storage.FileData.Builder getContentBuilder(
+        int index) {
+      return getContentFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .file_storage.FileData content = 2;</code>
+     */
+    public file_storage.FileDataOrBuilder getContentOrBuilder(
+        int index) {
+      if (contentBuilder_ == null) {
+        return content_.get(index);  } else {
+        return contentBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .file_storage.FileData content = 2;</code>
+     */
+    public java.util.List<? extends file_storage.FileDataOrBuilder> 
+         getContentOrBuilderList() {
+      if (contentBuilder_ != null) {
+        return contentBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(content_);
+      }
+    }
+    /**
+     * <code>repeated .file_storage.FileData content = 2;</code>
+     */
+    public file_storage.FileData.Builder addContentBuilder() {
+      return getContentFieldBuilder().addBuilder(
+          file_storage.FileData.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .file_storage.FileData content = 2;</code>
+     */
+    public file_storage.FileData.Builder addContentBuilder(
+        int index) {
+      return getContentFieldBuilder().addBuilder(
+          index, file_storage.FileData.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .file_storage.FileData content = 2;</code>
+     */
+    public java.util.List<file_storage.FileData.Builder> 
+         getContentBuilderList() {
+      return getContentFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        file_storage.FileData, file_storage.FileData.Builder, file_storage.FileDataOrBuilder> 
+        getContentFieldBuilder() {
+      if (contentBuilder_ == null) {
+        contentBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            file_storage.FileData, file_storage.FileData.Builder, file_storage.FileDataOrBuilder>(
+                content_,
+                ((bitField0_ & 0x00000001) != 0),
+                getParentForChildren(),
+                isClean());
+        content_ = null;
+      }
+      return contentBuilder_;
     }
 
     private java.lang.Object extension_ = "";

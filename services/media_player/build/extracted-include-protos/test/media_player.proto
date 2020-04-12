@@ -7,7 +7,22 @@ option objc_class_prefix = "MPR";
 package media_player;
 
 service MediaPlayer {
-    rpc PlayMedia(Empty) returns (Empty);
+    rpc PlayMedia(Media) returns (stream MediaContent);
+
+    rpc GetMovies(Empty) returns (stream Movie);
+}
+
+message Media {
+  string name = 1;
+  MediaContent content = 2;
+}
+
+message Movie {
+  string name = 1;
+}
+
+message MediaContent {
+  string content = 1;
 }
 
 message Empty {}

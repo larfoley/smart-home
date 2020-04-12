@@ -9,19 +9,19 @@ package file_storage;
 service FileStorage {
     rpc GetAllFiles(Empty) returns (stream FileObject);
 
-    rpc AddFile(FileObject) returns (FileObject);
+    rpc UploadFiles(stream FileObject) returns (stream FileObject);
 
-    rpc AddMultipleFiles(stream FileObject) returns (stream FileObject);
-
-    rpc UpdateFile(FileObject) returns (FileObject);
-
-    rpc DeleteFile(FileObject) returns (FileObject);
+    rpc FindFileByName(FileObject) returns (FileObject);
 }
 
 message FileObject {
   string name = 1;
-  string content = 2;
+  repeated FileData content = 2;
   string extension = 3;
+}
+
+message FileData {
+  string data = 1;
 }
 
 message Empty {}
