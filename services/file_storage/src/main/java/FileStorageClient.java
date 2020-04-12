@@ -159,6 +159,6 @@ public class FileStorageClient {
         );
 
         System.out.println("Response from RPC call to file_storage.filesToUpload");
-        client.uploadFiles(filesToUpload);
+        System.out.println(client.uploadFiles(filesToUpload));
     }
 }
