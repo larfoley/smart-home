@@ -1,7 +1,7 @@
 import heating.HeatingStatus;
 
 import javax.swing.*;
-import java.awt.*;
+import java.util.Objects;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -97,7 +97,7 @@ public class HeatingGui extends JFrame {
 
         comboBox.addActionListener(e -> {
             if (e.getSource() == comboBox) {
-                int strength = Integer.parseInt((String) comboBox.getSelectedItem());
+                int strength = Integer.parseInt((String) Objects.requireNonNull(comboBox.getSelectedItem()));
                 client.adjustStrength(strength);
                 gui.render();
             }

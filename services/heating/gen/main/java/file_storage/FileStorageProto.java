@@ -20,6 +20,11 @@ public final class FileStorageProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_file_storage_FileObject_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_file_storage_FileData_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_file_storage_FileData_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_file_storage_Empty_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -33,17 +38,15 @@ public final class FileStorageProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\022file_storage.proto\022\014file_storage\">\n\nFi" +
-      "leObject\022\014\n\004name\030\001 \001(\t\022\017\n\007content\030\002 \001(\t\022" +
-      "\021\n\textension\030\003 \001(\t\"\007\n\005Empty2\334\002\n\013FileStor" +
-      "age\022>\n\013GetAllFiles\022\023.file_storage.Empty\032" +
-      "\030.file_storage.FileObject0\001\022=\n\007AddFile\022\030" +
-      ".file_storage.FileObject\032\030.file_storage." +
-      "FileObject\022J\n\020AddMultipleFiles\022\030.file_st" +
-      "orage.FileObject\032\030.file_storage.FileObje" +
-      "ct(\0010\001\022@\n\nUpdateFile\022\030.file_storage.File" +
-      "Object\032\030.file_storage.FileObject\022@\n\nDele" +
-      "teFile\022\030.file_storage.FileObject\032\030.file_" +
+      "\n\022file_storage.proto\022\014file_storage\"V\n\nFi" +
+      "leObject\022\014\n\004name\030\001 \001(\t\022\'\n\007content\030\002 \003(\0132" +
+      "\026.file_storage.FileData\022\021\n\textension\030\003 \001" +
+      "(\t\"\030\n\010FileData\022\014\n\004data\030\001 \001(\t\"\007\n\005Empty2\332\001" +
+      "\n\013FileStorage\022>\n\013GetAllFiles\022\023.file_stor" +
+      "age.Empty\032\030.file_storage.FileObject0\001\022E\n" +
+      "\013UploadFiles\022\030.file_storage.FileObject\032\030" +
+      ".file_storage.FileObject(\0010\001\022D\n\016FindFile" +
+      "ByName\022\030.file_storage.FileObject\032\030.file_" +
       "storage.FileObjectB\032B\020FileStorageProtoP\001" +
       "\242\002\003FSPb\006proto3"
     };
@@ -57,8 +60,14 @@ public final class FileStorageProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_file_storage_FileObject_descriptor,
         new java.lang.String[] { "Name", "Content", "Extension", });
-    internal_static_file_storage_Empty_descriptor =
+    internal_static_file_storage_FileData_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_file_storage_FileData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_file_storage_FileData_descriptor,
+        new java.lang.String[] { "Data", });
+    internal_static_file_storage_Empty_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_file_storage_Empty_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_file_storage_Empty_descriptor,

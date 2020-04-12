@@ -15,6 +15,21 @@ public final class MediaPlayerProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_media_player_Media_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_media_player_Media_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_media_player_Movie_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_media_player_Movie_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_media_player_MediaContent_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_media_player_MediaContent_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_media_player_Empty_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -28,17 +43,40 @@ public final class MediaPlayerProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\022media_player.proto\022\014media_player\"\007\n\005Em" +
-      "pty2D\n\013MediaPlayer\0225\n\tPlayMedia\022\023.media_" +
-      "player.Empty\032\023.media_player.EmptyB\032B\020Med" +
-      "iaPlayerProtoP\001\242\002\003MPRb\006proto3"
+      "\n\022media_player.proto\022\014media_player\"B\n\005Me" +
+      "dia\022\014\n\004name\030\001 \001(\t\022+\n\007content\030\002 \001(\0132\032.med" +
+      "ia_player.MediaContent\"\025\n\005Movie\022\014\n\004name\030" +
+      "\001 \001(\t\"\037\n\014MediaContent\022\017\n\007content\030\001 \001(\t\"\007" +
+      "\n\005Empty2\206\001\n\013MediaPlayer\022>\n\tPlayMedia\022\023.m" +
+      "edia_player.Media\032\032.media_player.MediaCo" +
+      "ntent0\001\0227\n\tGetMovies\022\023.media_player.Empt" +
+      "y\032\023.media_player.Movie0\001B\032B\020MediaPlayerP" +
+      "rotoP\001\242\002\003MPRb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_media_player_Empty_descriptor =
+    internal_static_media_player_Media_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_media_player_Media_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_media_player_Media_descriptor,
+        new java.lang.String[] { "Name", "Content", });
+    internal_static_media_player_Movie_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_media_player_Movie_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_media_player_Movie_descriptor,
+        new java.lang.String[] { "Name", });
+    internal_static_media_player_MediaContent_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_media_player_MediaContent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_media_player_MediaContent_descriptor,
+        new java.lang.String[] { "Content", });
+    internal_static_media_player_Empty_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_media_player_Empty_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_media_player_Empty_descriptor,

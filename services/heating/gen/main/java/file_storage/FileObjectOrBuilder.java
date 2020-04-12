@@ -20,16 +20,28 @@ public interface FileObjectOrBuilder extends
       getNameBytes();
 
   /**
-   * <code>string content = 2;</code>
-   * @return The content.
+   * <code>repeated .file_storage.FileData content = 2;</code>
    */
-  java.lang.String getContent();
+  java.util.List<file_storage.FileData> 
+      getContentList();
   /**
-   * <code>string content = 2;</code>
-   * @return The bytes for content.
+   * <code>repeated .file_storage.FileData content = 2;</code>
    */
-  com.google.protobuf.ByteString
-      getContentBytes();
+  file_storage.FileData getContent(int index);
+  /**
+   * <code>repeated .file_storage.FileData content = 2;</code>
+   */
+  int getContentCount();
+  /**
+   * <code>repeated .file_storage.FileData content = 2;</code>
+   */
+  java.util.List<? extends file_storage.FileDataOrBuilder> 
+      getContentOrBuilderList();
+  /**
+   * <code>repeated .file_storage.FileData content = 2;</code>
+   */
+  file_storage.FileDataOrBuilder getContentOrBuilder(
+      int index);
 
   /**
    * <code>string extension = 3;</code>

@@ -7,6 +7,8 @@ import io.grpc.stub.StreamObserver;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
+// Implementation of the heating service methods defined in /proto/heating.proto
+
 class HeatingImpl extends HeatingGrpc.HeatingImplBase {
     private final int DEFAULT_HEATING_STRENGTH = 5;
     private final int MAX_HEATING_STRENGTH = 10;
@@ -20,10 +22,6 @@ class HeatingImpl extends HeatingGrpc.HeatingImplBase {
         this.heatingStrength = this.DEFAULT_HEATING_STRENGTH;
         this.runningTime = 0;
 
-    }
-
-    public static void main(String[] args) {
-        new HeatingImpl();
     }
 
     @Override

@@ -8,7 +8,6 @@ import java.util.logging.Logger;
 public class HeatingClient {
     private static final Logger logger = Logger.getLogger(HeatingClient.class.getName());
     private final HeatingGrpc.HeatingBlockingStub blockingStub;
-    private final HeatingGrpc.HeatingStub asyncStub;
     private ManagedChannel channel;
 
     public HeatingClient() {
@@ -20,7 +19,6 @@ public class HeatingClient {
                 .build();
 
         blockingStub = HeatingGrpc.newBlockingStub(channel);
-        asyncStub = HeatingGrpc.newStub(channel);
     }
 
     public HeatingStatus checkStatus() {
