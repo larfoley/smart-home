@@ -5,7 +5,6 @@ import javax.jmdns.JmDNS;
 import javax.jmdns.ServiceInfo;
 import java.io.IOException;
 import java.net.InetAddress;
-import java.net.UnknownHostException;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
@@ -42,14 +41,12 @@ public class FileStorageServer {
         try {
             JmDNS jmdns = JmDNS.create(InetAddress.getLocalHost());
 
-            ServiceInfo serviceInfo = ServiceInfo.create("_http._tcp.local.", "file_storage", 1237, "path=index.html");
+            ServiceInfo serviceInfo = ServiceInfo.create("_http._tcp.local.", "file_storage", PORT, "path=index.html");
             jmdns.registerService(serviceInfo);
 
-            Thread.sleep(25000);
+            System.out.println(serviceInfo.getName() + " service registered");
 
-            jmdns.unregisterAllServices();
-
-        } catch (IOException | InterruptedException e) {
+        } catch (IOException e) {
             System.out.println(e.getMessage());
         }
     }

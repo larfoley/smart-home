@@ -27,35 +27,66 @@ public final class MediaPlayerGrpc {
   public static final String SERVICE_NAME = "media_player.MediaPlayer";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<media_player.Empty,
-      media_player.Empty> getPlayMediaMethod;
+  private static volatile io.grpc.MethodDescriptor<media_player.Media,
+      media_player.MediaContent> getPlayMediaMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "PlayMedia",
-      requestType = media_player.Empty.class,
-      responseType = media_player.Empty.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<media_player.Empty,
-      media_player.Empty> getPlayMediaMethod() {
-    io.grpc.MethodDescriptor<media_player.Empty, media_player.Empty> getPlayMediaMethod;
+      requestType = media_player.Media.class,
+      responseType = media_player.MediaContent.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<media_player.Media,
+      media_player.MediaContent> getPlayMediaMethod() {
+    io.grpc.MethodDescriptor<media_player.Media, media_player.MediaContent> getPlayMediaMethod;
     if ((getPlayMediaMethod = MediaPlayerGrpc.getPlayMediaMethod) == null) {
       synchronized (MediaPlayerGrpc.class) {
         if ((getPlayMediaMethod = MediaPlayerGrpc.getPlayMediaMethod) == null) {
           MediaPlayerGrpc.getPlayMediaMethod = getPlayMediaMethod =
-              io.grpc.MethodDescriptor.<media_player.Empty, media_player.Empty>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              io.grpc.MethodDescriptor.<media_player.Media, media_player.MediaContent>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "PlayMedia"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  media_player.Empty.getDefaultInstance()))
+                  media_player.Media.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  media_player.Empty.getDefaultInstance()))
+                  media_player.MediaContent.getDefaultInstance()))
               .setSchemaDescriptor(new MediaPlayerMethodDescriptorSupplier("PlayMedia"))
               .build();
         }
       }
     }
     return getPlayMediaMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<media_player.Empty,
+      media_player.Movie> getGetMoviesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetMovies",
+      requestType = media_player.Empty.class,
+      responseType = media_player.Movie.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<media_player.Empty,
+      media_player.Movie> getGetMoviesMethod() {
+    io.grpc.MethodDescriptor<media_player.Empty, media_player.Movie> getGetMoviesMethod;
+    if ((getGetMoviesMethod = MediaPlayerGrpc.getGetMoviesMethod) == null) {
+      synchronized (MediaPlayerGrpc.class) {
+        if ((getGetMoviesMethod = MediaPlayerGrpc.getGetMoviesMethod) == null) {
+          MediaPlayerGrpc.getGetMoviesMethod = getGetMoviesMethod =
+              io.grpc.MethodDescriptor.<media_player.Empty, media_player.Movie>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetMovies"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  media_player.Empty.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  media_player.Movie.getDefaultInstance()))
+              .setSchemaDescriptor(new MediaPlayerMethodDescriptorSupplier("GetMovies"))
+              .build();
+        }
+      }
+    }
+    return getGetMoviesMethod;
   }
 
   /**
@@ -108,20 +139,34 @@ public final class MediaPlayerGrpc {
 
     /**
      */
-    public void playMedia(media_player.Empty request,
-        io.grpc.stub.StreamObserver<media_player.Empty> responseObserver) {
+    public void playMedia(media_player.Media request,
+        io.grpc.stub.StreamObserver<media_player.MediaContent> responseObserver) {
       asyncUnimplementedUnaryCall(getPlayMediaMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void getMovies(media_player.Empty request,
+        io.grpc.stub.StreamObserver<media_player.Movie> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetMoviesMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getPlayMediaMethod(),
-            asyncUnaryCall(
+            asyncServerStreamingCall(
+              new MethodHandlers<
+                media_player.Media,
+                media_player.MediaContent>(
+                  this, METHODID_PLAY_MEDIA)))
+          .addMethod(
+            getGetMoviesMethod(),
+            asyncServerStreamingCall(
               new MethodHandlers<
                 media_player.Empty,
-                media_player.Empty>(
-                  this, METHODID_PLAY_MEDIA)))
+                media_player.Movie>(
+                  this, METHODID_GET_MOVIES)))
           .build();
     }
   }
@@ -142,10 +187,18 @@ public final class MediaPlayerGrpc {
 
     /**
      */
-    public void playMedia(media_player.Empty request,
-        io.grpc.stub.StreamObserver<media_player.Empty> responseObserver) {
-      asyncUnaryCall(
+    public void playMedia(media_player.Media request,
+        io.grpc.stub.StreamObserver<media_player.MediaContent> responseObserver) {
+      asyncServerStreamingCall(
           getChannel().newCall(getPlayMediaMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getMovies(media_player.Empty request,
+        io.grpc.stub.StreamObserver<media_player.Movie> responseObserver) {
+      asyncServerStreamingCall(
+          getChannel().newCall(getGetMoviesMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -165,9 +218,18 @@ public final class MediaPlayerGrpc {
 
     /**
      */
-    public media_player.Empty playMedia(media_player.Empty request) {
-      return blockingUnaryCall(
+    public java.util.Iterator<media_player.MediaContent> playMedia(
+        media_player.Media request) {
+      return blockingServerStreamingCall(
           getChannel(), getPlayMediaMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public java.util.Iterator<media_player.Movie> getMovies(
+        media_player.Empty request) {
+      return blockingServerStreamingCall(
+          getChannel(), getGetMoviesMethod(), getCallOptions(), request);
     }
   }
 
@@ -184,17 +246,10 @@ public final class MediaPlayerGrpc {
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new MediaPlayerFutureStub(channel, callOptions);
     }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<media_player.Empty> playMedia(
-        media_player.Empty request) {
-      return futureUnaryCall(
-          getChannel().newCall(getPlayMediaMethod(), getCallOptions()), request);
-    }
   }
 
   private static final int METHODID_PLAY_MEDIA = 0;
+  private static final int METHODID_GET_MOVIES = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -214,8 +269,12 @@ public final class MediaPlayerGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_PLAY_MEDIA:
-          serviceImpl.playMedia((media_player.Empty) request,
-              (io.grpc.stub.StreamObserver<media_player.Empty>) responseObserver);
+          serviceImpl.playMedia((media_player.Media) request,
+              (io.grpc.stub.StreamObserver<media_player.MediaContent>) responseObserver);
+          break;
+        case METHODID_GET_MOVIES:
+          serviceImpl.getMovies((media_player.Empty) request,
+              (io.grpc.stub.StreamObserver<media_player.Movie>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -279,6 +338,7 @@ public final class MediaPlayerGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new MediaPlayerFileDescriptorSupplier())
               .addMethod(getPlayMediaMethod())
+              .addMethod(getGetMoviesMethod())
               .build();
         }
       }

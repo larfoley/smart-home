@@ -59,127 +59,65 @@ public final class FileStorageGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<file_storage.FileObject,
-      file_storage.FileObject> getAddFileMethod;
+      file_storage.FileObject> getUploadFilesMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "AddFile",
-      requestType = file_storage.FileObject.class,
-      responseType = file_storage.FileObject.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<file_storage.FileObject,
-      file_storage.FileObject> getAddFileMethod() {
-    io.grpc.MethodDescriptor<file_storage.FileObject, file_storage.FileObject> getAddFileMethod;
-    if ((getAddFileMethod = FileStorageGrpc.getAddFileMethod) == null) {
-      synchronized (FileStorageGrpc.class) {
-        if ((getAddFileMethod = FileStorageGrpc.getAddFileMethod) == null) {
-          FileStorageGrpc.getAddFileMethod = getAddFileMethod =
-              io.grpc.MethodDescriptor.<file_storage.FileObject, file_storage.FileObject>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddFile"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  file_storage.FileObject.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  file_storage.FileObject.getDefaultInstance()))
-              .setSchemaDescriptor(new FileStorageMethodDescriptorSupplier("AddFile"))
-              .build();
-        }
-      }
-    }
-    return getAddFileMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<file_storage.FileObject,
-      file_storage.FileObject> getAddMultipleFilesMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "AddMultipleFiles",
+      fullMethodName = SERVICE_NAME + '/' + "UploadFiles",
       requestType = file_storage.FileObject.class,
       responseType = file_storage.FileObject.class,
       methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
   public static io.grpc.MethodDescriptor<file_storage.FileObject,
-      file_storage.FileObject> getAddMultipleFilesMethod() {
-    io.grpc.MethodDescriptor<file_storage.FileObject, file_storage.FileObject> getAddMultipleFilesMethod;
-    if ((getAddMultipleFilesMethod = FileStorageGrpc.getAddMultipleFilesMethod) == null) {
+      file_storage.FileObject> getUploadFilesMethod() {
+    io.grpc.MethodDescriptor<file_storage.FileObject, file_storage.FileObject> getUploadFilesMethod;
+    if ((getUploadFilesMethod = FileStorageGrpc.getUploadFilesMethod) == null) {
       synchronized (FileStorageGrpc.class) {
-        if ((getAddMultipleFilesMethod = FileStorageGrpc.getAddMultipleFilesMethod) == null) {
-          FileStorageGrpc.getAddMultipleFilesMethod = getAddMultipleFilesMethod =
+        if ((getUploadFilesMethod = FileStorageGrpc.getUploadFilesMethod) == null) {
+          FileStorageGrpc.getUploadFilesMethod = getUploadFilesMethod =
               io.grpc.MethodDescriptor.<file_storage.FileObject, file_storage.FileObject>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddMultipleFiles"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UploadFiles"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   file_storage.FileObject.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   file_storage.FileObject.getDefaultInstance()))
-              .setSchemaDescriptor(new FileStorageMethodDescriptorSupplier("AddMultipleFiles"))
+              .setSchemaDescriptor(new FileStorageMethodDescriptorSupplier("UploadFiles"))
               .build();
         }
       }
     }
-    return getAddMultipleFilesMethod;
+    return getUploadFilesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<file_storage.FileObject,
-      file_storage.FileObject> getUpdateFileMethod;
+      file_storage.FileObject> getFindFileByNameMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "UpdateFile",
+      fullMethodName = SERVICE_NAME + '/' + "FindFileByName",
       requestType = file_storage.FileObject.class,
       responseType = file_storage.FileObject.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<file_storage.FileObject,
-      file_storage.FileObject> getUpdateFileMethod() {
-    io.grpc.MethodDescriptor<file_storage.FileObject, file_storage.FileObject> getUpdateFileMethod;
-    if ((getUpdateFileMethod = FileStorageGrpc.getUpdateFileMethod) == null) {
+      file_storage.FileObject> getFindFileByNameMethod() {
+    io.grpc.MethodDescriptor<file_storage.FileObject, file_storage.FileObject> getFindFileByNameMethod;
+    if ((getFindFileByNameMethod = FileStorageGrpc.getFindFileByNameMethod) == null) {
       synchronized (FileStorageGrpc.class) {
-        if ((getUpdateFileMethod = FileStorageGrpc.getUpdateFileMethod) == null) {
-          FileStorageGrpc.getUpdateFileMethod = getUpdateFileMethod =
+        if ((getFindFileByNameMethod = FileStorageGrpc.getFindFileByNameMethod) == null) {
+          FileStorageGrpc.getFindFileByNameMethod = getFindFileByNameMethod =
               io.grpc.MethodDescriptor.<file_storage.FileObject, file_storage.FileObject>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateFile"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "FindFileByName"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   file_storage.FileObject.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   file_storage.FileObject.getDefaultInstance()))
-              .setSchemaDescriptor(new FileStorageMethodDescriptorSupplier("UpdateFile"))
+              .setSchemaDescriptor(new FileStorageMethodDescriptorSupplier("FindFileByName"))
               .build();
         }
       }
     }
-    return getUpdateFileMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<file_storage.FileObject,
-      file_storage.FileObject> getDeleteFileMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "DeleteFile",
-      requestType = file_storage.FileObject.class,
-      responseType = file_storage.FileObject.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<file_storage.FileObject,
-      file_storage.FileObject> getDeleteFileMethod() {
-    io.grpc.MethodDescriptor<file_storage.FileObject, file_storage.FileObject> getDeleteFileMethod;
-    if ((getDeleteFileMethod = FileStorageGrpc.getDeleteFileMethod) == null) {
-      synchronized (FileStorageGrpc.class) {
-        if ((getDeleteFileMethod = FileStorageGrpc.getDeleteFileMethod) == null) {
-          FileStorageGrpc.getDeleteFileMethod = getDeleteFileMethod =
-              io.grpc.MethodDescriptor.<file_storage.FileObject, file_storage.FileObject>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteFile"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  file_storage.FileObject.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  file_storage.FileObject.getDefaultInstance()))
-              .setSchemaDescriptor(new FileStorageMethodDescriptorSupplier("DeleteFile"))
-              .build();
-        }
-      }
-    }
-    return getDeleteFileMethod;
+    return getFindFileByNameMethod;
   }
 
   /**
@@ -239,30 +177,16 @@ public final class FileStorageGrpc {
 
     /**
      */
-    public void addFile(file_storage.FileObject request,
+    public io.grpc.stub.StreamObserver<file_storage.FileObject> uploadFiles(
         io.grpc.stub.StreamObserver<file_storage.FileObject> responseObserver) {
-      asyncUnimplementedUnaryCall(getAddFileMethod(), responseObserver);
+      return asyncUnimplementedStreamingCall(getUploadFilesMethod(), responseObserver);
     }
 
     /**
      */
-    public io.grpc.stub.StreamObserver<file_storage.FileObject> addMultipleFiles(
+    public void findFileByName(file_storage.FileObject request,
         io.grpc.stub.StreamObserver<file_storage.FileObject> responseObserver) {
-      return asyncUnimplementedStreamingCall(getAddMultipleFilesMethod(), responseObserver);
-    }
-
-    /**
-     */
-    public void updateFile(file_storage.FileObject request,
-        io.grpc.stub.StreamObserver<file_storage.FileObject> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateFileMethod(), responseObserver);
-    }
-
-    /**
-     */
-    public void deleteFile(file_storage.FileObject request,
-        io.grpc.stub.StreamObserver<file_storage.FileObject> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteFileMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getFindFileByNameMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -275,33 +199,19 @@ public final class FileStorageGrpc {
                 file_storage.FileObject>(
                   this, METHODID_GET_ALL_FILES)))
           .addMethod(
-            getAddFileMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                file_storage.FileObject,
-                file_storage.FileObject>(
-                  this, METHODID_ADD_FILE)))
-          .addMethod(
-            getAddMultipleFilesMethod(),
+            getUploadFilesMethod(),
             asyncBidiStreamingCall(
               new MethodHandlers<
                 file_storage.FileObject,
                 file_storage.FileObject>(
-                  this, METHODID_ADD_MULTIPLE_FILES)))
+                  this, METHODID_UPLOAD_FILES)))
           .addMethod(
-            getUpdateFileMethod(),
+            getFindFileByNameMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 file_storage.FileObject,
                 file_storage.FileObject>(
-                  this, METHODID_UPDATE_FILE)))
-          .addMethod(
-            getDeleteFileMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                file_storage.FileObject,
-                file_storage.FileObject>(
-                  this, METHODID_DELETE_FILE)))
+                  this, METHODID_FIND_FILE_BY_NAME)))
           .build();
     }
   }
@@ -330,34 +240,18 @@ public final class FileStorageGrpc {
 
     /**
      */
-    public void addFile(file_storage.FileObject request,
-        io.grpc.stub.StreamObserver<file_storage.FileObject> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getAddFileMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public io.grpc.stub.StreamObserver<file_storage.FileObject> addMultipleFiles(
+    public io.grpc.stub.StreamObserver<file_storage.FileObject> uploadFiles(
         io.grpc.stub.StreamObserver<file_storage.FileObject> responseObserver) {
       return asyncBidiStreamingCall(
-          getChannel().newCall(getAddMultipleFilesMethod(), getCallOptions()), responseObserver);
+          getChannel().newCall(getUploadFilesMethod(), getCallOptions()), responseObserver);
     }
 
     /**
      */
-    public void updateFile(file_storage.FileObject request,
+    public void findFileByName(file_storage.FileObject request,
         io.grpc.stub.StreamObserver<file_storage.FileObject> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getUpdateFileMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void deleteFile(file_storage.FileObject request,
-        io.grpc.stub.StreamObserver<file_storage.FileObject> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getDeleteFileMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getFindFileByNameMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -385,23 +279,9 @@ public final class FileStorageGrpc {
 
     /**
      */
-    public file_storage.FileObject addFile(file_storage.FileObject request) {
+    public file_storage.FileObject findFileByName(file_storage.FileObject request) {
       return blockingUnaryCall(
-          getChannel(), getAddFileMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public file_storage.FileObject updateFile(file_storage.FileObject request) {
-      return blockingUnaryCall(
-          getChannel(), getUpdateFileMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public file_storage.FileObject deleteFile(file_storage.FileObject request) {
-      return blockingUnaryCall(
-          getChannel(), getDeleteFileMethod(), getCallOptions(), request);
+          getChannel(), getFindFileByNameMethod(), getCallOptions(), request);
     }
   }
 
@@ -421,34 +301,16 @@ public final class FileStorageGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<file_storage.FileObject> addFile(
+    public com.google.common.util.concurrent.ListenableFuture<file_storage.FileObject> findFileByName(
         file_storage.FileObject request) {
       return futureUnaryCall(
-          getChannel().newCall(getAddFileMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<file_storage.FileObject> updateFile(
-        file_storage.FileObject request) {
-      return futureUnaryCall(
-          getChannel().newCall(getUpdateFileMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<file_storage.FileObject> deleteFile(
-        file_storage.FileObject request) {
-      return futureUnaryCall(
-          getChannel().newCall(getDeleteFileMethod(), getCallOptions()), request);
+          getChannel().newCall(getFindFileByNameMethod(), getCallOptions()), request);
     }
   }
 
   private static final int METHODID_GET_ALL_FILES = 0;
-  private static final int METHODID_ADD_FILE = 1;
-  private static final int METHODID_UPDATE_FILE = 2;
-  private static final int METHODID_DELETE_FILE = 3;
-  private static final int METHODID_ADD_MULTIPLE_FILES = 4;
+  private static final int METHODID_FIND_FILE_BY_NAME = 1;
+  private static final int METHODID_UPLOAD_FILES = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -471,16 +333,8 @@ public final class FileStorageGrpc {
           serviceImpl.getAllFiles((file_storage.Empty) request,
               (io.grpc.stub.StreamObserver<file_storage.FileObject>) responseObserver);
           break;
-        case METHODID_ADD_FILE:
-          serviceImpl.addFile((file_storage.FileObject) request,
-              (io.grpc.stub.StreamObserver<file_storage.FileObject>) responseObserver);
-          break;
-        case METHODID_UPDATE_FILE:
-          serviceImpl.updateFile((file_storage.FileObject) request,
-              (io.grpc.stub.StreamObserver<file_storage.FileObject>) responseObserver);
-          break;
-        case METHODID_DELETE_FILE:
-          serviceImpl.deleteFile((file_storage.FileObject) request,
+        case METHODID_FIND_FILE_BY_NAME:
+          serviceImpl.findFileByName((file_storage.FileObject) request,
               (io.grpc.stub.StreamObserver<file_storage.FileObject>) responseObserver);
           break;
         default:
@@ -493,8 +347,8 @@ public final class FileStorageGrpc {
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_ADD_MULTIPLE_FILES:
-          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.addMultipleFiles(
+        case METHODID_UPLOAD_FILES:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.uploadFiles(
               (io.grpc.stub.StreamObserver<file_storage.FileObject>) responseObserver);
         default:
           throw new AssertionError();
@@ -548,10 +402,8 @@ public final class FileStorageGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new FileStorageFileDescriptorSupplier())
               .addMethod(getGetAllFilesMethod())
-              .addMethod(getAddFileMethod())
-              .addMethod(getAddMultipleFilesMethod())
-              .addMethod(getUpdateFileMethod())
-              .addMethod(getDeleteFileMethod())
+              .addMethod(getUploadFilesMethod())
+              .addMethod(getFindFileByNameMethod())
               .build();
         }
       }
