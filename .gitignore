@@ -1,3 +1,4 @@
 services/*/gen
 services/*/build
 node_modules
+*/workspace.xml
