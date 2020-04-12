@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_outer_classname = "LightsProto";
+option objc_class_prefix = "LTS";
+
+package lights;
+
+service Lights {
+    rpc TurnOn(Light) returns (LightsTurnedOnResponse);
+
+    rpc TurnOff(Light) returns (LightsTurnedOffResponse);
+
+    rpc TurnOnMultiple(stream Light) returns (LightsTurnedOnResponse);
+
+    rpc TurnOffMultiple(stream Light) returns (LightsTurnedOffResponse);
+
+    rpc GetStatus(Empty) returns (LightsStatus);
+}
+
+message Light {
+    int32 id = 1;
+    bool isOn = 2;
+    int32 brightness = 3;
+}
+
+message LightsStatus {
+  repeated Light lights = 1;
+}
+
+message LightsTurnedOnResponse {
+  int32 lightsTurnedOn = 1;
+  int32 totalLightsOn = 2;
+}
+
+message LightsTurnedOffResponse {
+  int32 lightsTurnedOff = 1;
+  int32 totalLightsOff = 2;
+}
+
+message Empty {}

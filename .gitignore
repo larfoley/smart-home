@@ -1,0 +1,3 @@
+services/*/gen
+services/*/build
+node_modules
